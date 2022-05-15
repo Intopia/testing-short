@@ -1,2 +1,3 @@
-# testing-short
-Shorter Intopia testing course - for designers, developers, testers and teams
+# CZI: Testing for Accessibility
+
+Session 1 and 2 only
