@@ -64,8 +64,7 @@
             <img src="assets/img-testing/overview.svg" style="float: right; width: 112px" alt="Overview">
             <h4>Overview</h4>
             <ul class="font-sm">
-              <li>Landmarks</li>
-              <li>Headings</li>
+              <li>Images</li>
               <li>Links</li>
               <li>Skip links</li>
             </ul>
@@ -92,366 +91,205 @@
                   </section>
                 </section>
 
-        <!--  –––––––––––––––––––––––––
-        ******  SECTION ******
-        ––––––––––––––––––––––––––  -->
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
 
-                <section id="landmarks">
-                  <section data-background="#15828E">
-                    <h2>Landmarks</h2>
-                  </section>
 
-                  <section data-background="#fff">
-                    <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
-                    <h4>Landmark regions</h4>
-                    <ul class="font-sm">
-                      <li><b>As a</b>: screen reader or keyboard user</li>
-                      <li><b>I want</b>: to easily navigate to common regions of a page</li>
-                      <li><b>So that</b>: I don’t have to navigate linearly through content</li>
-                    </ul>
-                  </section>
+
+                        <section id="images">
+                          <section data-background="#15828E">
+                            <h2>Images</h2>
+                          </section>
+
+                          <section data-background="#fff">
+                            <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
+                            <h4>Images</h4>
+                            <ul class="font-sm">
+                              <li><b>As a</b>: low vision or screen reader user</li>
+                              <li><b>I need</b>: informative images to be described and decorative images to be ignored</li>
+                              <li><b>So that</b>: I can understand the image purpose and not be distracted by unnecessary descriptions for decorative images</li>
+                            </ul>
+                          </section>
                               
-                  <section data-background="#fff">
-                    <h4>Screen reader demo of navigating landmarks</h4>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/IhWMou12_Vk?start=65" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </section>
+                          <section data-background="#fff">
+                            <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+                            <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" target="_blank">1.1.1 Non-text content (A)</a></h4>
+                            <p>All non-text content that is presented to the user has a text alternative that serves the equivalent purpose</p>
+                            <p class="font-xs"><b>Semi-automated test</b> MS Insights | Visual check</p>
+                          </section>
+                        </section>
+
+
+
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
+
+
+
+                        <section id="decorative-meaningful">
+                          <section data-background="#15828E">
+                            <h2>Decorative, informative and functional images</h2>
+                          </section>
+
+                          <section data-background="#fff">
+                            <table class="font-xs">
+                              <thead>
+                                <tr>
+                                  <th>Image type</th>
+                                  <th>Purpose</th>
+                                  <th>Accessible name</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Decorative</td>
+                                  <td>An image which has no content-related purpose</td>
+                                  <td>Use an empty <code>alt</code>, or apply as a background image via CSS</td>
+                                </tr>
+                                <tr>
+                                  <td>Informative</td>
+                                  <td>An image that contains valuable information and adds to the content</td>
+                                  <td>Requires an <code>alt</code></td>
+                                </tr>
+                                <tr>
+                                  <td>Functional</td>
+                                  <td>An image which is part of a UI control - such as a button icon or link</td>
+                                  <td>Requires an <code>alt</code></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </section>
+
+                          <section data-background="#222">
+                            <h3>Decorative images</h3>
+                          </section>
+
+                          <section data-background="#fff">
+                            <p>Decorative images should be <b>ignored by screen readers</b>.</p>
+                            <img src="assets/img-testing/4_decorative.png" style="width: 500px" alt="">
+                          </section>
+
+                          <section data-background="#222">
+                <pre><code contenteditable="true">&lt;img src="" <span class="codeHighlight">alt=""</span>&gt;</code></pre>
+                          </section>
+
+                          <section data-background="#222">
+                            <h3>Informative images</h3>
+                          </section>
+
+                          <section data-background="#fff">
+                            <p>Informative images should <b>include a text alternative</b> that conveys the meaning or content that is displayed visually.</p>
+                            <img src="assets/img-testing/4_lego.png" style="width: 400px" alt="Millenium Falcon made of Lego">
+                          </section>
+
+                          <section data-background="#222">
+                <pre><code contenteditable="true">&lt;img src="" <span class="codeHighlight">alt="Millenium Falcon Lego set"</span>&gt;</code></pre>
+                          </section>
+
+                          <section data-background="#222">
+                            <h3>Functional images</h3>
+                          </section>
+
+                          <section data-background="#fff">
+                            <p>If an image is used as a link or button, then it <b>should include a text alternative</b> that describes:</p>
+                            <ul class="font-sm">
+                              <li>The function of the link (where it will take you)</li>
+                              <li>The function of the button (what it will do)</li>
+                            </ul>
+                          </section>
+                                   
+                          <section data-background="#222">
+                <pre><code contenteditable="true">&lt;button <span class="codeHighlight">aria-label="Close"</span>&gt;X&lt;/button&gt;</code></pre>
+                          </section>
+
+                          <section data-background="#222">
+                <pre><code contenteditable="true">&lt;a href="#"&gt;
+                  &lt;img src="" <span class="codeHighlight">alt=""</span>&gt;
+                  Millemnium Falcon Lego set
+                &lt;/a&gt;</code></pre>
+                          </section>
+                        </section>
+
+
+
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
+
+
+
+                        <section id="complex-composite-images">
+                          <section data-background="#15828E">
+                            <h2>Complex and composite images</h2>
+                          </section>
+
+                          <section data-background="#222">
+                            <h3>Complex images</h3>
+                          </section>
+
+                          <section data-background="#fff">
+                            <p>Complex images such as <b>graphs or infographics</b> should have:</p>
+                            <ul class="font-sm">
+                              <li>a short description in the alt attribute</li>
+                              <li>an onscreen link to text description either in-page (recommended) or a new page link</li>
+                            </ul>
+                          </section>
                               
-                  <section data-background="#fff">
-                    <p>There are <b>two ways</b> to identify landmarks, using HTML elements and ARIA roles.</p>
-                  </section>
+                          <section data-background="#fff">
+                            <a href="https://webaim.org/resources/designers/#infographic" target="_blank"><img src="assets/img-testing/4_infograph.png" style="float: right; width: 200px" alt=""></a>
+                            <h4>WebAIM Accessible infograph</h4>
+                            <ul class="font-sm"><li>Short description in alt text</li>
+                              <li>In-page full text version</li>
+                            </ul>
+                          </section>
 
-                  <section data-background="#fff">
-                    <p>Where possible, you should <b>always use HTML elements for landmarks</b> rather than ARIA roles as these elements have semantics and behaviour already built-in.</p>
-                  </section>
-
-                  <section data-background="#fff">
-                    <table class="font-xs">
-                      <thead>
-                        <tr>
-                          <th>Landmark</th>
-                          <th>ARIA role</th>
-                          <th>HTML element</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Banner</td>
-                          <td><code>role="banner"</code></td>
-                          <td><code>&lt;header&gt;</code></td>
-                        </tr>
-                        <tr>
-                          <td>ContentInfo</td>
-                          <td><code>role="contentinfo"</code></td>
-                          <td><code>&lt;footer&gt;</code></td>
-                        </tr>
-                        <tr>
-                          <td>Navigation</td>
-                          <td><code>role="navigation"</code></td>
-                          <td><code>&lt;nav&gt;</code></td>
-                        </tr>
-                        <tr>
-                          <td>Main</td>
-                          <td><code>role="main"</code></td>
-                          <td><code>&lt;main&gt;</code></td>
-                        </tr>
-                        <tr>
-                          <td>Complementary</td>
-                          <td><code>role="complementary"</code></td>
-                          <td><code>&lt;aside&gt;</code></td>
-                        </tr>
-                        <tr>
-                          <td>Region</td>
-                          <td><code>role="region"</code></td>
-                          <td><code>&lt;section&gt;</code></td>
-                        </tr>
-                        <tr>
-                          <td>Article</td>
-                          <td><code>role="article"</code></td>
-                          <td><code>&lt;article&gt;</code></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </section>
-
-                  <section data-background="#fff">
-                    <h4>Landmark types</h4>
-                    <a href="http://www.w3.org/TR/wai-aria-practices/examples/landmarks/" target="_blank"><img src="assets/img-testing/landmarks.png" style="width: 500px" alt=""></a>
-                  </section>
-
-                  <section data-background="#fff">
-                    <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
-                    <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" target="_blank">1.3.1 Info &amp; Relationships (A)</a></h4>
-                    <p>Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.</p>
-                    <p class="font-xs"><b>Semi-automated test</b> | Microsoft Insights > Landmarks | Visual check</p>
-                  </section>
-
-                  <section data-background="#fff">
-                    <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
-                    <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks" target="_blank">2.4.1 Bypass blocks (A)</a></h4>
-                    <p>A mechanism is available to bypass blocks of content that are repeated on multiple Web pages.</p>
-                    <p class="font-xs"><b>Semi-automated test</b>  Microsoft Insights > Landmarks | Visual check</p>
-                  </section>
+                          <section data-background="#222">
+                            <h3>Composite images</h3>
+                          </section>
                               
-                  <section data-background="#222">
-                    <h3>Landmarks testing tools demo</h3>
-                  </section>
-                  
-                  <section data-background="#fff">
-                    <h4>Microsoft Insights landmarks testing</h4>
-                    <img src="assets/img-testing/landmarks-ms.png" alt="">
-                  </section>
-                  
-                  <section data-background="#222">
-                    <h3>Checklist for Landmarks</h3>
-                  </section>
-                  
-                  <section data-background="#fff">
-                    <table class="font-xs">
-                      <thead>
-                        <tr>
-                          <th></th>
-                          <th>Criteria</th>
-                          <th>Details</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><input type="checkbox" class="checkbox-large" id="land"></td>
-                          <td>1.3.1 Landmark purpose</td>
-                          <td><label for="land">Landmark roles <b>must </b>correspond to the relevant page region</label></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" class="checkbox-large" id="byp"></td>
-                          <td>2.4.1 Bypass function</td>
-                          <td><label for="byp">All page content <b>should </b>be contained by landmarks</label></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </section>
+                          <section data-background="#fff">
+                            <p>Ensure the text alternative for one of the images <b>describes the image as a whole</b>.</p>
+                            <img src="assets/img-testing/4_comp.png" style="width: 400px" alt="3 stars out of five">
+                          </section>
 
+                          <section data-background="#222">
+                <pre><code contenteditable="true">&lt;img src="fullstar.png" alt=""&gt;
+                &lt;img src="fullstar.png" alt=""&gt;
+                &lt;img src="fullstar.png" alt=""&gt;
+                &lt;img src="emptystar.png" alt=""&gt;
+                &lt;img src="emptystar.png" <span class="codeHighlight">alt="3 stars out of 5"</span>&gt;</code></pre>
+                          </section>
 
-                  <section data-background="#fff">
-                    <table class="font-xs">
-                      <thead>
-                        <tr>
-                          <th></th>
-                          <th>Criteria</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><input type="checkbox" class="checkbox-large" id="land-top"></td>
-                          <td><label for="land-top">Main, complementary and contentinfo landmarks <b>should </b>be top level landmarks</label></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" class="checkbox-large" id="land-1"></td>
-                          <td><label for="land-1">There <b>should </b> only be one main, banner, contentinfo landmark</label></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" class="checkbox-large" id="land-uni"></td>
-                          <td><label for="land-uni">If a landmark role is used more than once on a page, it <b>should </b> have a unique label</label></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" class="checkbox-large" id="land-name"></td>
-                          <td><label for="land-name">Landmark role names <b>should </b> not have “landmark” as part of the label – it creates unnecessary duplication.</label></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </section>
-                </section>
+                          <section data-background="#222">
+                            <h3>Checklist for images</h3>
+                          </section>
 
-
-
-        <!--  –––––––––––––––––––––––––
-        ******  SECTION ******
-        ––––––––––––––––––––––––––  -->
-
-
-
-                <section id="exercise-1">
-                  <section data-background="#d3420d">
-                    <h2>Exercise 1</h2>
-                  </section>
-
-                  <section data-background="#fff">
-                    <h4>Landmark testing</h4>
-                    <ul>
-                      <li>Type: Individual</li>
-                      <li>Time: 5 mins</li>
-                    </ul>
-                  </section>
-
-                  <section data-background="#fff">
-                    <h4>Instructions</h4>
-                    <ol class="font-sm">
-                      <li>Open up your organisation/product homepage</a></li>
-                      <li>Use <b>Microsoft Accessibility Insights > Adhoc tools > Landmarks</b> (or ANDI > Structures > Landmarks)</li>
-                      <li>Post any issues to the chat as follows:
-                        <ul>
-                          <li>1.3.1 Info &amp; Relationships: (Describe issue)</li>
-                          <li>Best practice issues: (Describe issue)</li>
-                        </ul>
-                      </li>
-                    </ol>
-                  </section>
-                </section>
-
-        <!--  –––––––––––––––––––––––––
-        ******  SECTION ******
-        ––––––––––––––––––––––––––  -->
-
-
-
-                <section id="headings">
-                  <section data-background="#15828E">
-                    <h2>Headings</h2>
-                  </section>
-                  
-                  <section data-background="#fff">
-                    <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
-                    <h4>Heading structure</h4>
-                    <ul class="font-sm">
-                      <li><b>As a</b>: screen reader user</li>
-                      <li><b>I want</b>: descriptive headings that are hierarchical structured like a table of contents</li>
-                      <li><b>So that</b>: I can understand the structure of content on a page and easily navigate to sections of content</li>
-                    </ul>
-                  </section>
-
-                  <section data-background="#fff">
-                    <p>According to <a href="https://webaim.org/projects/screenreadersurvey9/" target="_blank">WebAIM's 2021 Screen Reader User Survey:</a></p>
-                    <ul>
-                      <li>67.7% use headings to find information</li>
-                      <li>85.7% of respondents find heading levels very or somewhat useful</li>
-                    </ul>
-                  </section>
-
-                  <section data-background="#fff">
-                    <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
-                    <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" target="_blank">1.3.1 Info &amp; Relationships (A)</a></h4>
-                    <p>Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.</p>
-                    <p class="font-xs"><b>Semi-automated test</b>| Microsoft Insights > Headings | Visual check</p>
-                  </section>
-
-                  <section data-background="#fff">
-                    <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
-                    <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels" target="_blank">2.4.6 Headings and Labels (AA)</a></h4>
-                    <p>Headings and labels describe topic or purpose</p>
-                    <p class="font-xs"><b>Semi-automated test</b> | Microsoft Insights > Headings | Visual check</p>
-                  </section>
-
-                  <section data-background="#222">
-                    <h3>Headings testing tools demo</h3>
-                  </section>
-                  
-                  <section data-background="#fff">
-                    <h4>Microsoft Insights headings testing</h4>
-                    <img src="assets/img-testing/headings-ms.png" alt="">
-                  </section>
-         
-                  <section data-background="#222">
-                    <h3>WCAG Checklist for Headings</h3>
-                  </section>
-
-                  <section data-background="#fff">
-                    <table class="font-xs">
-                      <thead>
-                        <tr>
-                          <th></th>
-                          <th>Criteria</th>
-                          <th>Details</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><input type="checkbox" class="checkbox-large" id="head"></td>
-                          <td>2.4.6 Heading purpose</td>
-                          <td><label for="head">Headings <b>must </b>describe the topic or purpose of its content</label></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" class="checkbox-large" id="head-lev"></td>
-                          <td>1.3.1 Heading level</td>
-                          <td><label for="head-lev">Heading level markup (H1-H6) <b>must </b>match the visual presentation within the structure</label></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" class="checkbox-large" id="head-det1"></td>
-                          <td>1.3.1 Heading determinable</td>
-                          <td><label for="head-det1">Heading markup <b>must </b>be used for visual headings</label></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" class="checkbox-large" id="head-det2"></td>
-                          <td>1.3.1 Heading determinable (continued)</td>
-                          <td><label for="head-det2">Heading markup <b>must </b>not be used when content is not a visual heading</label></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </section>
-
-                  <section data-background="#222">
-                    <h3>Best Practice Checklist for Headings</h3>
-                  </section>
-
-                  <section data-background="#fff">
-                    <table class="font-xs">
-                      <thead>
-                        <tr>
-                          <th></th>
-                          <th>Criteria</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><input type="checkbox" class="checkbox-large" id="head-skip"></td>
-                          <td><label for="head-skip">Heading levels <b>should </b>only increase by one</label></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" class="checkbox-large" id="head-1"></td>
-                          <td><label for="head-1">Page <b>should </b>contain one heading level 1</label></td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" class="checkbox-large" id="head-sec"></td>
-                          <td><label for="head-sec">Each new section of content <b>should </b>be identified by a descriptive heading</label></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </section>
-                </section>
-
-
-
-        <!--  –––––––––––––––––––––––––
-        ******  SECTION ******
-        ––––––––––––––––––––––––––  -->
-
-
-
-                <section id="exercise-2">
-                  <section data-background="#d3420d">
-                    <h2>Exercise 2</h2>
-                  </section>
-
-                  <section data-background="#fff">
-                    <h4>Testing headings</h4>
-                    <ul>
-                      <li>Type: Individual</li>
-                      <li>Time: 5 mins</li>
-                    </ul>
-                  </section>
-
-                  <section data-background="#fff">
-                    <h4>Instructions</h4>
-                    <ol class="font-sm">
-                      <li>Open up your organisation/product home page</li>
-                      <li>Use <b>Microsoft Accessibility Insights > Adhoc tools > Headings</b></li>
-                      <li>Post any heading issues you find to the chat as follows:
-                        <ul>
-                          <li>1.3.1 Info &amp; Relationships: (Describe issue)</li>
-                          <li>2.4.6 Heading and Labels: (Describe issue)</li>
-                          <li>Best practices: (Describe issue)</li>
-                        </ul>
-                      </li>
-                    </ol>
-                  </section>
-                </section>
+                          <section data-background="#fff">
+                            <table class="font-xs">
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>Criteria</th>
+                                  <th>Details</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><input type="checkbox" class="checkbox-large" id="imgname"></td>
+                                  <td>1.1.1 Informative image name</td>
+                                  <td><label for="imgname">The accessible name/description must provide an equivalent description of the image</label></td>
+                                </tr>
+                                <tr>
+                                  <td><input type="checkbox" class="checkbox-large" id="decname"></td>
+                                  <td>1.1.1 Decorative image ignored</td>
+                                  <td><label for="decname">There must not be an accessible name/description for a decorative image</label></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </section>
+                        </section>
 
         <!--  –––––––––––––––––––––––––
         ******  SECTION ******
