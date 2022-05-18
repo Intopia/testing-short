@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Session 3 | Testing for Accessibility</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <div class="menu">
+          <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#fff">
+          <div class="instructions">
+            <h3 class="instructions-heading">Slide instructions</h3>
+            <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
+            <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
+            <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
+            <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
+            <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
+          </div>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="session-2">
+          <section data-background="#d3420d">
+            <h1>Session 2</h1>
+            <h5>Testing for Accessibility</h5>
+          </section>
+
+          <section data-background="#fff">
+            <h4>What you will need</h4>
+            <p>Download at: <a href="https://bit.ly/" target="_blank">bit.ly/</a></p>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Today</h4>
+            <ul>
+              <li>Part 1: 55 minutes</li>
+              <li>Break: 10 minutes</li>
+              <li>Part 2: 55 minutes</li>
+            </ul>
+          </section>
+          
+          <section data-background="#fff">
+            <img src="assets/img-testing/overview.svg" style="float: right; width: 112px" alt="Overview">
+            <h4>Overview</h4>
+            <ul class="font-sm">
+              <li>Use of color</li>
+              <li>Text and Non-text contrast</li>
+              <li>Forms</li>
+            </ul>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+        <section id="use-of-color">
+          <section data-background="#15828E">
+            <h2>Use of colour</h2>
+          </section>
+
+          <section data-background="#fff">
+            <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
+            <h4>Colour</h4>
+            <ul class="font-sm">
+              <li><b>As a</b>: user who has difficulty distinguishing between colours and shades</li>
+              <li><b>I need</b>: information that is conveyed with colour to also be available using another visual method</li>
+              <li><b>So that</b>: I can understand all information</li>
+            </ul>
+          </section>
+
+          <section data-background="#fff">
+            <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+            <h4><a href="https://www.w3.org/TR/WCAG21/#use-of-color" target="_blank">1.4.1 Use of Color (A)</a></h4>
+            <p>Color is not used as the only visual means of:</p>
+            <ul class="font-sm">
+              <li>conveying information</li>
+              <li>indicating an action</li>
+              <li>prompting a response</li>
+              <li>distinguishing a visual element</li>
+            </ul>
+            <p class="font-xs"><b>Manual test</b> Chrome dev tools | Visual check</p>
+          </section>
+          
+          <section data-background="#fff">
+            <h4>Accessible to color vision impaired?</h4>
+            <img src="assets/img-testing/graph01.svg" style="width: 700px" alt="">
+          </section>
+          
+          <section data-background="#fff">
+            <h4>Gray scaled version</h4>
+            <img src="assets/img-testing/graph02.svg" style="width: 700px" alt="">
+          </section>
+          
+          <section data-background="#fff">
+            <h4>Accessible text alternative</h4>
+            <img src="assets/img-testing/graph03.svg" style="width: 450px" alt="">
+            <aside class="notes">
+              Can you tell which slice refers to South America?
+            </aside>
+          </section>
+          
+          <section data-background="#fff">
+            <h4> How could this chart be made more accessible?</h4>
+            <img src="assets/img-testing/chart-protonopia.png" style="width: 600px" alt="">
+          </section>
+          
+          <section data-background="#fff">
+            <h4>Accessible pattern version</h4>
+            <img src="assets/img-testing/chart-pattern.png" style="width: 600px" alt="">
+          </section>
+         
+         <section data-background="#fff">
+            <h4>Link example – pass or fail Use of color?</h4>
+            <img src="assets/img-testing/link-as-color.png" style="width: 600px" alt="">
+         </section>
+         
+         <section data-background="#fff">
+            <h4>Link contrast text requirement 3:1</h4>
+            <img src="assets/img-testing/link-contrast.png" style="width: 600px" alt="">
+         </section>
+          
+          <section data-background="#fff">
+            <h4>Link underline - best practice</h4>
+            <img src="assets/img-testing/link-underline.png" style="width: 800px" alt="">
+          </section>
+
+          <section data-background="#222">
+            <h3>Checklist for Use of Color</h3>
+          </section>
+          
+          <section data-background="#fff">
+            <table class="font-xs">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Criteria</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" class="checkbox-large" id="col"></td>
+                  <td>1.4.1 Use of Color</td>
+                  <td><label for="col">Information that is conveyed by colour differences must also be available using another visual means, such as text, underline or pattern</label></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          
+          <section data-background="#222">
+            <h3>Use of Color testing tools demo</h3>
+          </section>
+          
+          <section data-background="#fff">
+            <h4>Dev tools and ANDI bookmarklet</h4>
+            <img src="assets/img-testing/dev-tool-color.png" style="width: 700px" alt="">
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+        <section id="exercise-1">
+          <section data-background="#d3420d">
+            <h2>Exercise 1</h2>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Color blind empathy challenge</h4>
+            <ul>
+              <li>Type: Individual</li>
+              <li>Time: 5 mins</li>
+            </ul>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Instructions</h4>
+            <ol class="font-sm">
+              <li>Open the Chrome web developer tools (Fn > F12) and test any web page</li>
+              <li>Locate <b>More tools > Rendering > Emulate vision deficiencies > Achromatopsia</b></li>
+              <li>Note any issues you find and post in the chat as follows:
+                <ul>
+                  <li>1.4.1 Use of colour: (Describe issue)</li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+        <section id="contrast">
+          <section data-background="#15828E">
+            <h2>Contrast</h2>
+          </section>
+
+          <section data-background="#222">
+            <h3>Text contrast</h3>
+          </section>
+
+          <section data-background="#fff">
+            <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
+            <h4>Contrast</h4>
+            <ul class="font-sm">
+              <li><b>As a</b>: user with low vision</li>
+              <li><b>I need</b>: important text, graphics and user interface components to have good contrast</li>
+              <li><b>So that</b>: I can easily perceive all important information</li>
+            </ul>
+          </section>
+
+          <section data-background="#fff">
+            <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+            <h4><a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank">1.4.3 Contrast (minimum)(A)</a></h4>
+            <p>The visual presentation of text and images of text has a contrast ratio of at least 4.5:1 except for:</p>
+            <ul class="font-sm">
+              <li><b>Large-scale </b>text and images of text</li>
+              <li>Text and images of text that are part of an <b>inactive UI component</b> or are <b>pure decoration</b></li>
+              <li>Text that is part of a <b>logotype</b></li>
+            </ul>
+            <p class="font-xs"><b>Semi-automated test</b> | MS Insights | Visual check</p>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Contrast - normal text</h4>
+            <p>Normal text must have a contrast ratio of <b>at least</b> 4.5:1<br>
+            Normal text is <b>less than</b> 14 point bold or 18 point</p>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Contrast - large text</h4>
+            <p>Large text must have a contrast ratio of <b>at least</b> 3:1<br>
+            Large text is <b>at least</b> 14 point bold or 18 point</p>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Contrast - statistics</h4>
+            <img src="assets/img-testing/webaim-contrast.png" style="width: 650px" alt="">
+          </section>
+
+          <section data-background="#fff">
+            <p>According to the <a href="https://webaim.org/projects/million/#contrast" target="_blank">WebAIM 2020 global survey</a> of 1 million homepages, <b>86.4%</b> failed contrast requirements</p>  
+          </section>
+
+          <section data-background="#fff">
+            <table class="font-xs">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Criteria</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" class="checkbox-large" id="txt-con"></td>
+                  <td>1.4.3 Contrast minimum</td>
+                  <td><label for="txt-con">Normal text must have a contrast ratio of at least 4:5:1 (including images of text)</label></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox-large" id="txt-con-lge"></td>
+                  <td>1.4.3 Contrast minimum</td>
+                  <td><label for="txt-con-lge">Large text must have a contrast ratio of at least 3:1 </label></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#222">
+            <h3>Testing text contrast demo</h3>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="exercise-2">
+          <section data-background="#d3420d">
+            <h2>Exercise 2</h2>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Text contrast challenge</h4>
+            <ul>
+              <li>Type: Individual</li>
+              <li>Time: 5 mins</li>
+            </ul>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Instructions</h4>
+            <ol class="font-sm">
+              <li>Open any web page and run <b>MS Insights </b>to check for text contrast fails.</li>
+              <li>Post any contrast fails in the chat as follows:
+                <ul class="font-sm">
+                  <li>URL you tested</li>
+                  <li>1.4.3 Contrast minimum: (Describe issue)</li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+        <section id="non-text-contrast">
+          <section data-background="#15828E">
+            <h2>Non-text contrast</h2>
+          </section>
+
+          <section data-background="#fff">
+            <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
+            <h4>Contrast</h4>
+            <ul class="font-sm">
+              <li><b>As a</b>: user with low vision</li>
+              <li><b>I need</b>: important graphics, icons, states and uotlines for user interface components to have good contrast</li>
+              <li><b>So that</b>: I can easily perceive all important information</li>
+            </ul>
+          </section>
+
+          <section data-background="#fff">
+            <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+            <h4>1.4.11 Non-text contrast (AA)</h4>
+            <p>The visual presentation of the following must have a contrast ratio of at least 3:1 against adjacent color(s):</p>
+            <ul class="font-sm">
+              <li><b>User Interface Components</b> Visual information required to identify user interface components and states</li>
+              <li><b>Graphical Objects</b> Parts of graphics required to understand the content</li>
+            </ul>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Exceptions</h4>
+            <ul class="font-sm">
+              <li>logos</li>
+              <li>browser default focus indicators</li>
+              <li>disabled components</li>
+            </ul>
+            <p class="font-xs"><b>Manual test</b> | Developer tools | Colour Contrast Analyser</p>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Contrast - borders, outlines, states</h4>
+            <img src="assets/img-testing/non-text-dont.png" alt="">
+            <img src="assets/img-testing/non-text-do.png" alt="">
+          </section>
+
+          <section data-background="#fff">
+            <h4>Contrast - icons</h4>
+            <img src="assets/img-testing/icon-contrast-dont.png" alt="">
+            <img src="assets/img-testing/icon-contrast-do.png" alt="">
+          </section>
+
+          <section data-background="#fff">
+            <h4>Contrast - graphics</h4>
+            <p class="font-sm"><b>Challenge:</b> What meaning is being conveyed by these icons?</p>
+            <img src="assets/img-testing/graph-contrast-dont.png" alt="">
+          </section>
+
+          <section data-background="#fff">
+            <h4>Improved contrast - graphics</h4>
+            <img src="assets/img-testing/graph-contrast-do.png" alt="">
+          </section>
+
+          <section data-background="#222">
+            <h3>Checklist for non-text contrast</h3>
+          </section>
+
+          <section data-background="#fff">
+            <table class="font-xs">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Criteria</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" class="checkbox-large" id="non-txt-con"></td>
+                  <td>1.4.11 Non-text contrast</td>
+                  <td><label for="non-txt-con">Visual information that is necessary for a user to identify a control, know how to use it, or what state it is on must have a contrast ratio of at least 3:1</label></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox-large" id="foc-con"></td>
+                  <td>1.4.11 Non-text contrast</td>
+                  <td><label for="foc-con">Custom focus styles must have a contrast ratio of at least 3:1</label></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#222">
+            <h3>Non-text contrast demo</h3>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="exercise-3">
+          <section data-background="#d3420d">
+            <h2>Exercise 3</h2>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Non-text contrast challenge</h4>
+            <ul>
+              <li>Type: Individual</li>
+              <li>Time: 5 mins</li>
+            </ul>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Instructions</h4>
+            <ol class="font-sm">
+              <li>Open your organisation/product homepage and use <b>Colour Contrast Analyser </b> and <b>developer tools </b>to check for non-text contrast fails.</li>
+              <li>Test the contrast of outlines, borders, states, graphics and icons</li>
+              <li>Post any contrast fails in the chat as follows:
+                <ul>
+                  <li>URL you tested</li>
+                  <li>1.4.11 Non-text contrast: (Describe issue)</li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+
+          <section data-background="#fff">
+            <h4>How to test focus state contrast</h4>
+            <img src="assets/img-testing/CZI_devfocus.png" alt="">
+            <ol class="font-xs">
+              <li>Enable the <b>Focus checkbox </b>in the dev tools styles panel to identify the focus style colour.</li>
+              <li>Use the <b>Colour contrast analyser </b> or <a href="https://contrast-finder.tanaguru.com/" target="_blank">Tanaguru contrast finder</a> to test contrast against the background.</li>
+            </ol>
+          </section>
+        </section>
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+        <section id="labels-instructions">
+          <section data-background="#15828E">
+            <h2>Form Labels &amp; Instructions</h2>
+          </section>
+
+          <section data-background="#222">
+            <h3>Labels</h3>
+          </section>
+
+          <section data-background="#fff">
+            <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
+            <h4>Form labels</h4>
+            <ul class="font-sm">
+              <li><b>As a</b>: screen reader user</li>
+              <li><b>I want</b>: form fields to have descriptive and unique labels that are linked to form fields in code</li>
+              <li><b>So that</b>: when I tab to a form field, I hear the label</li>
+            </ul>
+          </section>
+
+          <section data-background="#fff">
+            <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
+            <h4>Form labels</h4>
+            <ul class="font-sm">
+              <li><b>As a</b>: Dragon Naturally Speaking user</li>
+              <li><b>I want</b>: form fields to have descriptive and unique labels that are linked to form fields in code</li>
+              <li><b>So that</b>: I can navigate to a form field by its label</li>
+            </ul>
+          </section>
+
+          <section data-background="#fff">
+            <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+            <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" target="_blank">1.3.1 Info and Relationships (A)</a></h4>
+            <p>Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.</p>
+            <p class="font-xs"><b>Semi-automated test</b> Axe | Screen reader | Visual check</p>
+          </section>
+
+          <section data-background="#fff">
+            <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+            <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels" target="_blank">2.4.6 Headings and Labels (AA)</a></h4>
+            <p>Headings and labels describe topic or purpose</p>
+            <p class="font-xs"><b>Semi-automated test</b> Axe | Screen reader | Visual check</p>
+          </section>
+
+          <section data-background="#fff">
+            <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+            <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name" target="_blank">2.5.3 Label in name (A)</a></h4>
+            <p>For UI components with labels that include text or images of text, the (accessible) name contains the text that is presented visually</p>
+            <p class="font-xs"><b>Semi-automated test</b> Axe | Screen reader | Visual check</p>
+          </section>
+
+          <section data-background="#fff">
+            <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+            <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions" target="_blank">3.3.2 Labels or Instructions (A)</a></h4>
+            <p>Labels or instructions are provided when content requires user input.</p>
+            <p class="font-xs"><b>Semi-automated test</b> Axe | Screen reader | Visual check</p>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Clear visual labels</h4>
+            <p>Labels are descriptive and <b>should </b>be near form fields</p>
+            <img src="assets/img-testing/form01.svg" style="width: 380px" alt="">
+          </section>
+
+          <section data-background="#fff">
+            <h4>Labels linked in code</h4>
+            <img src="assets/img-testing/linkedcode.png" style="width: 850px" alt="">
+          </section>
+
+          <section data-background="#222">
+            <h3>The placeholder attribute</h3>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Placeholder used as a label or instructions</h4>
+            <p class="font-sm">Can you spot the issues?</p>
+            <img src="assets/img-testing/placeholder.gif" alt="">
+          </section>
+
+          <section data-background="#fff">
+            <p>Placeholder text  <b>must not </b>be used as a replacement for labels or instructions:</p>
+            <ul class="font-sm">
+              <li>Not reliably available to all screen readers</li>
+              <li>Often low contrast</li>
+              <li>Disappears when typing</li>
+            </ul>
+          </section>
+
+          <section data-background="#222">
+            <h3>Checklist for form labels</h3>
+          </section>
+
+          <section data-background="#fff">
+            <table class="font-xs">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Criteria</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" class="checkbox-large" id="fflab"></td>
+                  <td>1.3.1 Programmatic label</td>
+                  <td><label for="fflab">Form fields must have associated labels that are properly linked in code (checked by axe)</label></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox-large" id="labdesc"></td>
+                  <td>3.3.2 Labels or Instructions</td>
+                  <td><label for="labdesc">Labels or instructions are provided when content requires user input</label></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox-large" id="headings-labels"></td>
+                  <td>2.4.6 Headings and Labels</td>
+                  <td><label for="headings-labels">Headings and labels describe topic or purpose</label></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox-large" id="labpos"></td>
+                  <td>Best practice</td>
+                  <td><label for="labpos">Labels should be near the form field</label></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section data-background="#222">
+            <h3>Instructions</h3>
+          </section>
+
+          <section data-background="#fff">
+            <img src="assets/img-testing/overview.svg" style="float: right; width: 112px" alt="Overview">
+            <h4>Instructions</h4>
+            <ul class="font-sm">
+              <li><b>As a</b>: user</li>
+              <li><b>I want</b>: instructions about required fields or input restrictions</li>
+              <li><b>So that</b>: I have all the information I need to complete a form without causing errors</li>
+            </ul>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Required/Optional fields</h4>
+            <p>All required/optional fields are identified</p>
+            <img src="assets/img-testing/form02.svg" style="width: 380px" alt="">
+          </section>
+
+          <section data-background="#fff">
+            <h4>Spot any issues?</h4>
+            <img  src="assets/img-testing/form03.svg" style="width: 380px" alt="">
+          </section>
+
+          <section data-background="#fff">
+            <h4>Input restrictions</h4>
+            <p>Input restrictions are clearly indicated</p>
+            <img src="assets/img-testing/form04.svg" style="width: 380px" alt="">
+          </section>
+
+          <section data-background="#fff">
+            <img src="assets/img-testing/insttop.png" style="float: right; width: 350px"  alt="">
+            <h4>1. Instructions at top of the form</h4>
+            <p>Ensures that they will be read before navigating to the input and entering forms mode</p>
+          </section>
+
+          <section data-background="#fff">
+            <h4>2. Instructions within the label</h4>
+            <img src="assets/img-testing/form05.svg" style="width: 500px" alt="">
+          </section>
+
+          <section data-background="#222">
+<pre><code contenteditable="true">&lt;label for="pwd"&gt;My Account password &lt;/label&gt;
+&lt;span <span class="codeHighlight">id="pwr"</span>&gt;At least 6 alphanumeric characters&lt;/span&gt;
+&lt;input type="text" id="pwd" <span class="codeHighlight">aria-describedby="pwr"</span>&gt;
+</code></pre>
+          </section>
+    
+          <section data-background="#222">
+            <h3>Checklist for form instructions</h3>
+          </section>
+
+          <section data-background="#fff">
+            <table class="font-xs">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" class="checkbox-large" id="req"></td>
+                  <td><label for="req">Required and/or optional fields must be clearly labelled</label></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox-large" id="restr"></td>
+                  <td><label for="restr">Fields that require specific data formats or rules must have clearly described instructions</label></td>
+                </tr>
+                 <tr>
+                  <td><input type="checkbox" class="checkbox-large" id="inst"></td>
+                  <td>
+                    <label for="inst">Instructions must be either</label>:
+                    <ul>
+                      <li>at the start of the form</li>
+                      <li>within the label or</li>
+                      <li>linked to the associated form field in code</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="exercise-4">
+          <section data-background="#d3420d">
+            <h2>Exercise 4</h2>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Testing forms activity</h4>
+            <ul>
+              <li>Type: Individual</li>
+              <li>Time: 5 mins</li>
+            </ul>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Instructions</h4>
+            <ol class="font-sm">
+              <li>Open the “How can we help” dialog on the Along home page</li>
+              <li>Open your <b>dev tools </b>to test form labels</li>
+              <li>Post in the chat any form fields that are unlabelled or that have related instructions that are not announced </li>
+            </ol>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="accessible-role">
+          <section data-background="#15828E">
+            <h2>Accessible name, role and values</h2>
+          </section>
+
+          <section data-background="#fff">
+            <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
+            <h4>Name, role and current state</h4>
+            <ul class="font-sm">
+              <li><b>As a</b> screen reader user</li>
+              <li><b>I want</b>: to know the name, role and current state of a form control</li>
+              <li><b>So that</b>: I know what I am interacting with and the current state (checked, collapsed etc) so that I do not generate an error</li>
+            </ul>
+          </section>
+
+          <section data-background="#fff">
+            <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+            <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value" target="_blank">4.1.2 Name, role, value (A)</a></h4>
+            <p>For all user interface components ... the name, role, states, properties and values ... can be programmatically determined and is available to user agents, including assistive technologies.</p>
+            <p class="font-xs"><b>Semi-automated test</b>| Dev tools | Visual check</p>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Inspecting the Accessibility tab</h4>
+            <img src="assets/img-testing/5_AccessibilityTab.png"  alt="">
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="exercise-5">
+          <section data-background="#d3420d">
+            <h2>Exercise 5</h2>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Name, role, value activity</h4>
+            <ul>
+              <li>Type: Individual</li>
+              <li>Time: 6 mins</li>
+            </ul>
+          </section>
+
+          <section data-background="#fff">
+            <h4>Instructions</h4>
+            <ol class="font-sm">
+              <li>Open a form on your organisation site</li>
+              <li>Open your <b>dev tools </b>to test if the form fields name, role and states are announced</li>
+              <li>Post any failures in the chat as follows:
+                <ul class="font-sm">
+                  <li>4.1.2 Name, role, value (describe element)</li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+        </section>
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="session-3-review">
+          <section data-background="#d3420d">
+            <h2>Session 2 review</h2>
+          </section>
+          
+          <section data-background="#fff">
+            <img src="assets/img-testing/quiz.svg" style="float: right; width: 112px;" alt="Quiz icon">
+            <h4>Competition</h4>
+            <p><a href="https://myquiz.org/Lectures" target="_blank">How much did you learn?</a></p>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'none',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealNotes ]
+			});
+		</script>
+
+  </body>
+</html>
