@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Session 1 | Testing for Accessibility</title>
+    <title>Session 1 | Web Accessibility Testing for Teams</title>
     <link rel="shortcut icon" href="favicon.ico">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -71,8 +71,8 @@
               <li>Testing types and tools</li>
               <li>Keyboard accessibilty</li>
               <li>Focus order and indication</li>
-              <li>Images</li>
-              <li>Links and skip links</li>
+              <li>Use of colour</li>
+              <li>Text and non-text contrast</li>
             </ul>
           </section>
           
@@ -154,7 +154,7 @@
           <section data-background="#fff">
             <h4>Instructions</h4>
             <ol class="font-sm">
-              <li><b>Run MS Insights</b> over your organisation/product homepage</li>
+              <li><b>Run MS Insights > Assessment </b> over your organisation/product homepage</li>
               <li>Post in chat how many <b>overall automated issues</b> are detected</li>
               <li>Use the <b>visual helper</b>  tool to inspect individual issues on the page</li>
               <li>Familiarise yourselves with the interface and features</li>
@@ -493,25 +493,172 @@
             </ol>
           </section>
         </section>
+        
+        <!--  –––––––––––––––––––––––––
+        ******  SECTION ******
+        ––––––––––––––––––––––––––  -->
+
+
+                <section id="use-of-color">
+                  <section data-background="#15828E">
+                    <h2>Use of colour</h2>
+                  </section>
+
+                  <section data-background="#fff">
+                    <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
+                    <h4>Colour</h4>
+                    <ul class="font-sm">
+                      <li><b>As a</b>: user who has difficulty distinguishing between colours and shades</li>
+                      <li><b>I need</b>: information that is conveyed with colour to also be available using another visual method</li>
+                      <li><b>So that</b>: I can understand all information</li>
+                    </ul>
+                  </section>
+
+                  <section data-background="#fff">
+                    <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+                    <h4><a href="https://www.w3.org/TR/WCAG21/#use-of-color" target="_blank">1.4.1 Use of Color (A)</a></h4>
+                    <p>Color is not used as the only visual means of:</p>
+                    <ul class="font-sm">
+                      <li>conveying information</li>
+                      <li>indicating an action</li>
+                      <li>prompting a response</li>
+                      <li>distinguishing a visual element</li>
+                    </ul>
+                    <p class="font-xs"><b>Manual test</b> Chrome dev tools | Visual check</p>
+                  </section>
+                  
+                  <section data-background="#fff">
+                    <h4>Accessible to color vision impaired?</h4>
+                    <img src="assets/img-testing/graph01.svg" style="width: 700px" alt="">
+                  </section>
+                  
+                  <section data-background="#fff">
+                    <h4>Gray scaled version</h4>
+                    <img src="assets/img-testing/graph02.svg" style="width: 700px" alt="">
+                  </section>
+                  
+                  <section data-background="#fff">
+                    <h4>Accessible text alternative</h4>
+                    <img src="assets/img-testing/graph03.svg" style="width: 450px" alt="">
+                    <aside class="notes">
+                      Can you tell which slice refers to South America?
+                    </aside>
+                  </section>
+                  
+                  <section data-background="#fff">
+                    <h4> How could this chart be made more accessible?</h4>
+                    <img src="assets/img-testing/chart-protonopia.png" style="width: 600px" alt="">
+                  </section>
+                  
+                  <section data-background="#fff">
+                    <h4>Accessible pattern version</h4>
+                    <img src="assets/img-testing/chart-pattern.png" style="width: 600px" alt="">
+                  </section>
+                 
+                 <section data-background="#fff">
+                    <h4>Link example – pass or fail Use of color?</h4>
+                    <img src="assets/img-testing/link-as-color.png" style="width: 600px" alt="">
+                 </section>
+                 
+                 <section data-background="#fff">
+                    <h4>Link contrast text requirement 3:1</h4>
+                    <img src="assets/img-testing/link-contrast.png" style="width: 600px" alt="">
+                 </section>
+                  
+                  <section data-background="#fff">
+                    <h4>Link underline - best practice</h4>
+                    <img src="assets/img-testing/link-underline.png" style="width: 800px" alt="">
+                  </section>
+
+                  <section data-background="#222">
+                    <h3>Checklist for Use of Color</h3>
+                  </section>
+                  
+                  <section data-background="#fff">
+                    <table class="font-xs">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Criteria</th>
+                          <th>Details</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><input type="checkbox" class="checkbox-large" id="col"></td>
+                          <td>1.4.1 Use of Color</td>
+                          <td><label for="col">Information that is conveyed by colour differences must also be available using another visual means, such as text, underline or pattern</label></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </section>
+                  
+                  <section data-background="#222">
+                    <h3>Use of Color testing tools demo</h3>
+                  </section>
+                  
+                  <section data-background="#fff">
+                    <h4>Dev tools and ANDI bookmarklet</h4>
+                    <img src="assets/img-testing/dev-tool-color.png" style="width: 700px" alt="">
+                  </section>
+                </section>
+
+
+
+        <!--  –––––––––––––––––––––––––
+        ******  SECTION ******
+        ––––––––––––––––––––––––––  -->
+
+                <section id="exercise-1">
+                  <section data-background="#d3420d">
+                    <h2>Exercise 1</h2>
+                  </section>
+
+                  <section data-background="#fff">
+                    <h4>Color blind empathy challenge</h4>
+                    <ul>
+                      <li>Type: Individual</li>
+                      <li>Time: 5 mins</li>
+                    </ul>
+                  </section>
+
+                  <section data-background="#fff">
+                    <h4>Instructions</h4>
+                    <ol class="font-sm">
+                      <li>Open the Chrome web developer tools (Fn > F12) and test any web page</li>
+                      <li>Locate <b>More tools > Rendering > Emulate vision deficiencies > Achromatopsia</b></li>
+                      <li>Note any issues you find and post in the chat as follows:
+                        <ul>
+                          <li>1.4.1 Use of colour: (Describe issue)</li>
+                        </ul>
+                      </li>
+                    </ol>
+                  </section>
+                </section>
+
+
 
         <!--  –––––––––––––––––––––––––
         ******  SECTION ******
         ––––––––––––––––––––––––––  -->
 
 
-
-                <section id="images">
+                <section id="contrast">
                   <section data-background="#15828E">
-                    <h2>Images</h2>
+                    <h2>Contrast</h2>
+                  </section>
+
+                  <section data-background="#222">
+                    <h3>Text contrast</h3>
                   </section>
 
                   <section data-background="#fff">
                     <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
-                    <h4>Images</h4>
+                    <h4>Contrast</h4>
                     <ul class="font-sm">
-                      <li><b>As a</b>: low vision or screen reader user</li>
-                      <li><b>I need</b>: informative images to be described and decorative images to be ignored</li>
-                      <li><b>So that</b>: I can understand the image purpose and not be distracted by unnecessary descriptions for decorative images</li>
+                      <li><b>As a</b>: user with low vision</li>
+                      <li><b>I need</b>: important text, graphics and user interface components to have good contrast</li>
+                      <li><b>So that</b>: I can easily perceive all important information</li>
                     </ul>
                   </section>
                   </section>
@@ -520,170 +667,51 @@
                   ******  SECTION ******
                   ––––––––––––––––––––––––––  -->
 
-
                           <section id="exercise-2">
                             <section data-background="#d3420d">
-                              <h2>Exercise 6</h2>
+                              <h2>Exercise 2</h2>
                             </section>
 
                     <section data-background="#fff">
                       <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
-                      <h4>Partially sighted screen reader user</h4>
-                      <img src="assets/img-testing/Persona=Ashleigh.svg" alt="Ashleigh persona">
+                      <h4>Partially sighted screen magnifier user</h4>
+                      <img src="assets/img-testing/Persona=Claudia.svg" alt="Claudia persona">
                       </br>
                       </br>
-                      <a class="font-sm" href="https://www.gov.uk/government/publications/understanding-disabilities-and-impairments-user-profiles/ashleigh-partially-sighted-screenreader-user">GOV.UK accessibility persona</a>
+                      <a class="font-sm" href="https://www.gov.uk/government/publications/understanding-disabilities-and-impairments-user-profiles/claudia-partially-sighted-screen-magnifier-user">GOV.UK accessibility persona</a>
                     </section>
 
-                      
                   <section data-background="#fff">
                     <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
-                    <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" target="_blank">1.1.1 Non-text content (A)</a></h4>
-                    <p>All non-text content that is presented to the user has a text alternative that serves the equivalent purpose</p>
-                    <p class="font-xs"><b>Semi-automated test</b> MS Insights | Visual check</p>
-                  </section>
-                </section>
-
-
-
-        <!--  –––––––––––––––––––––––––
-        ******  SECTION ******
-        ––––––––––––––––––––––––––  -->
-
-
-
-                <section id="decorative-meaningful">
-                  <section data-background="#15828E">
-                    <h2>Decorative, informative and functional images</h2>
-                  </section>
-
-                  <section data-background="#fff">
-                    <table class="font-xs">
-                      <thead>
-                        <tr>
-                          <th>Image type</th>
-                          <th>Purpose</th>
-                          <th>Accessible name</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Decorative</td>
-                          <td>An image which has no content-related purpose</td>
-                          <td>Use an empty <code>alt</code>, or apply as a background image via CSS</td>
-                        </tr>
-                        <tr>
-                          <td>Informative</td>
-                          <td>An image that contains valuable information and adds to the content</td>
-                          <td>Requires an <code>alt</code></td>
-                        </tr>
-                        <tr>
-                          <td>Functional</td>
-                          <td>An image which is part of a UI control - such as a button icon or link</td>
-                          <td>Requires an <code>alt</code></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </section>
-
-                  <section data-background="#222">
-                    <h3>Decorative images</h3>
-                  </section>
-
-                  <section data-background="#fff">
-                    <p>Decorative images should be <b>ignored by screen readers</b>.</p>
-                    <img src="assets/img-testing/4_decorative.png" style="width: 500px" alt="">
-                  </section>
-
-                  <section data-background="#222">
-                    <h3>Informative images</h3>
-                  </section>
-
-                  <section data-background="#fff">
-                    <p>Informative images should <b>include a text alternative</b> that conveys the meaning or content that is displayed visually.</p>
-                    <img src="assets/img-testing/4_lego.png" style="width: 400px" alt="Millenium Falcon made of Lego">
-                  </section>
-
-                  <section data-background="#222">
-        <pre><code contenteditable="true">&lt;img src="" <span class="codeHighlight">alt="Millenium Falcon Lego set"</span>&gt;</code></pre>
-                  </section>
-
-                  <section data-background="#222">
-                    <h3>Functional images</h3>
-                  </section>
-
-                  <section data-background="#fff">
-                    <p>If an image is used as a link or button, then it <b>should include a text alternative</b> that describes:</p>
+                    <h4><a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank">1.4.3 Contrast (minimum)(A)</a></h4>
+                    <p>The visual presentation of text and images of text has a contrast ratio of at least 4.5:1 except for:</p>
                     <ul class="font-sm">
-                      <li>The function of the link (where it will take you)</li>
-                      <li>The function of the button (what it will do)</li>
+                      <li><b>Large-scale </b>text and images of text</li>
+                      <li>Text and images of text that are part of an <b>inactive UI component</b> or are <b>pure decoration</b></li>
+                      <li>Text that is part of a <b>logotype</b></li>
                     </ul>
-                  </section>
-                           
-                  <section data-background="#222">
-        <pre><code contenteditable="true">&lt;button <span class="codeHighlight">aria-label="Close"</span>&gt;X&lt;/button&gt;</code></pre>
-                  </section>
-
-                  <section data-background="#222">
-        <pre><code contenteditable="true">&lt;a href="#"&gt;
-          &lt;img src="" <span class="codeHighlight">alt=""</span>&gt;
-          Millemnium Falcon Lego set
-        &lt;/a&gt;</code></pre>
-                  </section>
-                </section>
-
-
-
-        <!--  –––––––––––––––––––––––––
-        ******  SECTION ******
-        ––––––––––––––––––––––––––  -->
-
-
-
-                <section id="complex-composite-images">
-                  <section data-background="#15828E">
-                    <h2>Complex and composite images</h2>
-                  </section>
-
-                  <section data-background="#222">
-                    <h3>Complex images</h3>
+                    <p class="font-xs"><b>Semi-automated test</b> | MS Insights | Visual check</p>
                   </section>
 
                   <section data-background="#fff">
-                    <p>Complex images such as <b>graphs or infographics</b> should have:</p>
-                    <ul class="font-sm">
-                      <li>a short description in the alt attribute</li>
-                      <li>an onscreen link to text description either in-page (recommended) or a new page link</li>
-                    </ul>
+                    <h4>Contrast - normal text</h4>
+                    <p>Normal text must have a contrast ratio of <b>at least</b> 4.5:1<br>
+                    Normal text is <b>less than</b> 14 point bold or 18 point</p>
                   </section>
-                      
+
                   <section data-background="#fff">
-                    <a href="https://webaim.org/resources/designers/#infographic" target="_blank"><img src="assets/img-testing/4_infograph.png" style="float: right; width: 200px" alt=""></a>
-                    <h4>WebAIM Accessible infograph</h4>
-                    <ul class="font-sm"><li>Short description in alt text</li>
-                      <li>In-page full text version</li>
-                    </ul>
+                    <h4>Contrast - large text</h4>
+                    <p>Large text must have a contrast ratio of <b>at least</b> 3:1<br>
+                    Large text is <b>at least</b> 14 point bold or 18 point</p>
                   </section>
 
-                  <section data-background="#222">
-                    <h3>Composite images</h3>
-                  </section>
-                      
                   <section data-background="#fff">
-                    <p>Ensure the text alternative for one of the images <b>describes the image as a whole</b>.</p>
-                    <img src="assets/img-testing/4_comp.png" style="width: 400px" alt="3 stars out of five">
+                    <h4>Contrast - statistics</h4>
+                    <img src="assets/img-testing/webaim-contrast.png" style="width: 650px" alt="">
                   </section>
 
-                  <section data-background="#222">
-        <pre><code contenteditable="true">&lt;img src="fullstar.png" alt=""&gt;
-        &lt;img src="fullstar.png" alt=""&gt;
-        &lt;img src="fullstar.png" alt=""&gt;
-        &lt;img src="emptystar.png" alt=""&gt;
-        &lt;img src="emptystar.png" <span class="codeHighlight">alt="3 stars out of 5"</span>&gt;</code></pre>
-                  </section>
-
-                  <section data-background="#222">
-                    <h3>Checklist for images</h3>
+                  <section data-background="#fff">
+                    <p>According to the <a href="https://webaim.org/projects/million/#contrast" target="_blank">WebAIM 2020 global survey</a> of 1 million homepages, <b>86.4%</b> failed contrast requirements</p>
                   </section>
 
                   <section data-background="#fff">
@@ -697,239 +725,202 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td><input type="checkbox" class="checkbox-large" id="imgname"></td>
-                          <td>1.1.1 Informative image name</td>
-                          <td><label for="imgname">The accessible name/description must provide an equivalent description of the image</label></td>
+                          <td><input type="checkbox" class="checkbox-large" id="txt-con"></td>
+                          <td>1.4.3 Contrast minimum</td>
+                          <td><label for="txt-con">Normal text must have a contrast ratio of at least 4:5:1 (including images of text)</label></td>
                         </tr>
                         <tr>
-                          <td><input type="checkbox" class="checkbox-large" id="decname"></td>
-                          <td>1.1.1 Decorative image ignored</td>
-                          <td><label for="decname">There must not be an accessible name/description for a decorative image</label></td>
+                          <td><input type="checkbox" class="checkbox-large" id="txt-con-lge"></td>
+                          <td>1.4.3 Contrast minimum</td>
+                          <td><label for="txt-con-lge">Large text must have a contrast ratio of at least 3:1 </label></td>
                         </tr>
                       </tbody>
                     </table>
                   </section>
+
+                  <section data-background="#222">
+                    <h3>Testing text contrast demo</h3>
+                  </section>
                 </section>
-                
- <!--  –––––––––––––––––––––––––
-  ******  SECTION ******
-  ––––––––––––––––––––––––––  -->
-
-                        <section id="exercise-7">
-                          <section data-background="#d3420d">
-                            <h2>Exercise 7</h2>
-                          </section>
-
-                          <section data-background="#fff">
-                            <h4>Image testing</h4>
-                            <ul>
-                              <li>Type: Individual</li>
-                              <li>Time: 10 mins</li>
-                            </ul>
-                          </section>
-                        
-                          <section data-background="#fff">
-                            <h4>Instructions</h4>
-                            <ol class="font-sm">
-                              <li>Open up your organisation/product homepage</a></li>
-                              <li>Using <b>Microsoft Insights > Images 14.1 ands 14.2</b> test the images on the page</li
-                              <li>Post in the chat any failures you find as follows:
-                                <ul>
-                                  <li>1.1.1 Non-text content (describe element)</li>
-                                </ul>
-                              </li>
-                            </ol>
-                          </section>
-                        </section>
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-        <section id="links">
-          <section data-background="#15828E">
-            <h2>Links</h2>
-          </section>
-          
-          <section data-background="#fff">
-            <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
-            <h4>Links</h4>
-            <ul class="font-sm">
-              <li><b>As a</b>: screen reader user or user with motor or cognitive impairment</li>
-              <li><b>I want</b>: links to clearly describe where they will take me, and</li>
-              <li><b>I want</b>: links that take me to the same page to be labelled the same</li>
-              <li><b>So that</b>: it is easy for me to decide if I want to follow a link</li>
-            </ul>
-          </section>
-          
-          <section data-background="#fff">
-            <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
-            <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context" target="_blank">2.4.4 Link purpose (In context) (A)</a></h4>
-            <p>The purpose of each link can be determined from the <b>link text alone</b> or from the <b>link text together with its context</b></p>
-            <p class="font-xs"><b>Semi-automated test</b> | MS Insights | Visual check</p>
-          </section>
-          
-          <section data-background="#fff">
-            <h4>Link text is meaningful on its own</h4>
-            <img src="assets/img-testing/linkonown.png" alt="">
-          </section>
-          
-          <section data-background="#fff">
-            <h4>Link text is meaningful when combined with its context</h4>
-            <img src="assets/img-testing/linkcontext.png" alt="">
-          </section>
-          
-          <section data-background="#fff">
-            <h4>Links that open tabs/windows/files are indicated</h4>
-            <img src="assets/img-testing/extlinks.png" style="width: 600px" alt="">
-            <img src="assets/img-testing/fileformats.png" style="width: 550px" alt="">
-          </section>
-          
-          <section data-background="#222">
-            <h3>Checklist for links</h3>
-          </section>
-
-          <section data-background="#fff">
-            <table class="font-xs">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Criteria</th>
-                  <th>Details</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><input type="checkbox" class="checkbox-large" id="link-purp"></td>
-                  <td>2.4.4 Link purpose</td>
-                  <td><label for="link-purp">The link purpose <b>must </b>be clear on its own (recommended) OR when read with the enclosing sentence, paragraph, list item or table cell and associated header cell(s)</label></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox" class="checkbox-large" id="link-not"></td>
-                  <td>Link notification</td>
-                  <td><label for="link-not">Links that open in a new window or open a different file format <b>should </b>include that as part of the link text</label></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-        </section>
 
 
 
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
+        <!--  –––––––––––––––––––––––––
+        ******  SECTION ******
+        ––––––––––––––––––––––––––  -->
 
 
 
-        <section id="skip-links">
-          <section data-background="#15828E">
-            <h2>Skip links</h2>
-          </section>
+                <section id="exercise-3">
+                  <section data-background="#d3420d">
+                    <h2>Exercise 3</h2>
+                  </section>
 
-          <section data-background="#fff">
-            <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
-            <h4>Skip links</h4>
-            <ul class="font-sm">
-              <li><b>As a</b>: screen reader user or keyboard user</li>
-              <li><b>I want</b>: to skip over content that is repeated across your website</li>
-              <li><b>So that</b>: I don’t have to navigate through it each time</li>
-            </ul>
-          </section>
-            
-          <section data-background="#fff">
-            <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
-            <h4><a href="https://www.w3.org/TR/WCAG21/#bypass-blocks" target="_blank">2.4.1 Bypass Blocks (A)</a></h4>
-            <p>A mechanism is available to bypass blocks of content that are repeated on multiple Web pages</p>
-            <p class="font-xs"><b>Semi-automated test</b> | Keyboard | Manual check</p>
-          </section>
-            
-          <section data-background="#fff">
-            <h4>Skip link example</h4>
-            <img src="assets/img-testing/skiplink.png" style="width: 700px" alt="">
-          </section>
+                  <section data-background="#fff">
+                    <h4>Text contrast challenge</h4>
+                    <ul>
+                      <li>Type: Individual</li>
+                      <li>Time: 5 mins</li>
+                    </ul>
+                  </section>
 
-          <section data-background="#222">
-            <h3>Checklist for skip links</h3>
-          </section>
-            
-          <section data-background="#fff">
-            <table class="font-xs">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Criteria</th>
-                  <th>Details</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><input type="checkbox" class="checkbox-large" id="slink-pur"></td>
-                  <td>2.4.4 Skip link purpose</td>
-                  <td><label for="slink-pur">The link description must say that it links to the main content</label></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox" class="checkbox-large" id="slink-fun"></td>
-                  <td>2.4.1 Skip link function</td>
-                  <td><label for="slink-fun">Activating the link must move focus to the main content</label></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox" class="checkbox-large" id="slink-foc"></td>
-                  <td>2.4.7 Focus visible</td>
-                  <td><label for="slink-foc">The link must be either always visible or when it has keyboard focus</label></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox" class="checkbox-large" id="slink-pos"></td>
-                  <td>Skip link position</td>
-                  <td><label  for="slink-pos">The skip-link should be the first focusable control on the page</label></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-        </section>
+                  <section data-background="#fff">
+                    <h4>Instructions</h4>
+                    <ol class="font-sm">
+                      <li>Open any web page and run <b>MS Insights </b>to check for text contrast fails.</li>
+                      <li>Post any contrast fails in the chat as follows:
+                        <ul class="font-sm">
+                          <li>URL you tested</li>
+                          <li>1.4.3 Contrast minimum: (Describe issue)</li>
+                        </ul>
+                      </li>
+                    </ol>
+                  </section>
+                </section>
 
 
 
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
+        <!--  –––––––––––––––––––––––––
+        ******  SECTION ******
+        ––––––––––––––––––––––––––  -->
+
+                <section id="non-text-contrast">
+                  <section data-background="#15828E">
+                    <h2>Non-text contrast</h2>
+                  </section>
+
+                  <section data-background="#fff">
+                    <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
+                    <h4>Contrast</h4>
+                    <ul class="font-sm">
+                      <li><b>As a</b>: user with low vision</li>
+                      <li><b>I need</b>: important graphics, icons, states and uotlines for user interface components to have good contrast</li>
+                      <li><b>So that</b>: I can easily perceive all important information</li>
+                    </ul>
+                  </section>
+
+                  <section data-background="#fff">
+                    <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+                    <h4>1.4.11 Non-text contrast (AA)</h4>
+                    <p>The visual presentation of the following must have a contrast ratio of at least 3:1 against adjacent color(s):</p>
+                    <ul class="font-sm">
+                      <li><b>User Interface Components</b> Visual information required to identify user interface components and states</li>
+                      <li><b>Graphical Objects</b> Parts of graphics required to understand the content</li>
+                    </ul>
+                  </section>
+
+                  <section data-background="#fff">
+                    <h4>Exceptions</h4>
+                    <ul class="font-sm">
+                      <li>logos</li>
+                      <li>browser default focus indicators</li>
+                      <li>disabled components</li>
+                    </ul>
+                    <p class="font-xs"><b>Manual test</b> | Developer tools | Colour Contrast Analyser</p>
+                  </section>
+
+                  <section data-background="#fff">
+                    <h4>Contrast - borders, outlines, states</h4>
+                    <img src="assets/img-testing/non-text-dont.png" alt="">
+                    <img src="assets/img-testing/non-text-do.png" alt="">
+                  </section>
+
+                  <section data-background="#fff">
+                    <h4>Contrast - icons</h4>
+                    <img src="assets/img-testing/icon-contrast-dont.png" alt="">
+                    <img src="assets/img-testing/icon-contrast-do.png" alt="">
+                  </section>
+
+                  <section data-background="#fff">
+                    <h4>Contrast - graphics</h4>
+                    <p class="font-sm"><b>Challenge:</b> What meaning is being conveyed by these icons?</p>
+                    <img src="assets/img-testing/graph-contrast-dont.png" alt="">
+                  </section>
+
+                  <section data-background="#fff">
+                    <h4>Improved contrast - graphics</h4>
+                    <img src="assets/img-testing/graph-contrast-do.png" alt="">
+                  </section>
+
+                  <section data-background="#222">
+                    <h3>Checklist for non-text contrast</h3>
+                  </section>
+
+                  <section data-background="#fff">
+                    <table class="font-xs">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Criteria</th>
+                          <th>Details</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><input type="checkbox" class="checkbox-large" id="non-txt-con"></td>
+                          <td>1.4.11 Non-text contrast</td>
+                          <td><label for="non-txt-con">Visual information that is necessary for a user to identify a control, know how to use it, or what state it is on must have a contrast ratio of at least 3:1</label></td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox" class="checkbox-large" id="foc-con"></td>
+                          <td>1.4.11 Non-text contrast</td>
+                          <td><label for="foc-con">Custom focus styles must have a contrast ratio of at least 3:1</label></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </section>
+
+                  <section data-background="#222">
+                    <h3>Non-text contrast demo</h3>
+                  </section>
+                </section>
 
 
 
-        <section id="exercise-8">
-          <section data-background="#d3420d">
-            <h2>Exercise 8</h2>
-          </section>
+        <!--  –––––––––––––––––––––––––
+        ******  SECTION ******
+        ––––––––––––––––––––––––––  -->
 
-          <section data-background="#fff">
-            <h4>Link testing challenge</h4>
-            <ul>
-              <li>Type: Individual</li>
-              <li>Time: 5 mins</li>
-            </ul>
-          </section>
+                <section id="exercise-4">
+                  <section data-background="#d3420d">
+                    <h2>Exercise 4</h2>
+                  </section>
 
-          <section data-background="#fff">
-            <h4>Instructions</h4>
-            <ol class="font-sm">
-              <li>Use your <b>keyboard </b>and <b> MS Insights</b> to test links on your organisation/product homepage</a></li>
-              <li>Post any issues you find to the chat as follows:
-                <ul class="font-sm">
-                  <li>2.4.4 Link purpose: (Describe issue)</li>
-                  <li>2.4.7 Focus visible:(Describe issue)</li>
-                  <li>2.4.1 Bypass Blocks:(Describe issue)</li>
-                  <li>Best practice:(Describe issue)</li>
-                </ul>
-              </li>
-            </ol>
-          </section>
-        </section>
+                  <section data-background="#fff">
+                    <h4>Non-text contrast challenge</h4>
+                    <ul>
+                      <li>Type: Individual</li>
+                      <li>Time: 5 mins</li>
+                    </ul>
+                  </section>
+
+                  <section data-background="#fff">
+                    <h4>Instructions</h4>
+                    <ol class="font-sm">
+                      <li>Open your organisation/product homepage and use <b>Colour Contrast Analyser </b> and <b>developer tools </b>to check for non-text contrast fails.</li>
+                      <li>Test the contrast of outlines, borders, states, graphics and icons</li>
+                      <li>Post any contrast fails in the chat as follows:
+                        <ul>
+                          <li>URL you tested</li>
+                          <li>1.4.11 Non-text contrast: (Describe issue)</li>
+                        </ul>
+                      </li>
+                    </ol>
+                  </section>
+
+                  <section data-background="#fff">
+                    <h4>How to test focus state contrast</h4>
+                    <img src="assets/img-testing/CZI_devfocus.png" alt="">
+                    <ol class="font-xs">
+                      <li>Enable the <b>Focus checkbox </b>in the dev tools styles panel to identify the focus style colour.</li>
+                      <li>Use the <b>Colour contrast analyser </b> or <a href="https://contrast-finder.tanaguru.com/" target="_blank">Tanaguru contrast finder</a> to test contrast against the background.</li>
+                    </ol>
+                  </section>
+                </section>
 
 
 
-
-
-
+       
 
 <!--  –––––––––––––––––––––––––
 ******  SECTION ******

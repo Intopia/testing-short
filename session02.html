@@ -1,864 +1,906 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Session 2 | Testing for Accessibility</title>
-    <link rel="shortcut icon" href="favicon.ico">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/reveal.css">
-    <link rel="stylesheet" href="dist/theme/intopia.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-
-        <div class="menu">
-          <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
-        </div>
-
-        <section data-background="#fff">
-          <div class="instructions">
-            <h3 class="instructions-heading">Slide instructions</h3>
-            <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
-            <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
-            <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
-            <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
-            <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
-          </div>
-        </section>
-
-
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-
-
-        <section id="session-2">
-          <section data-background="#d3420d">
-            <h1>Session 2</h1>
-            <h5>Testing for Accessibility</h5>
-          </section>
-
-          <section data-background="#fff">
-            <h4>What you will need</h4>
-            <p>Download at: <a href="https://bit.ly/" target="_blank">bit.ly/</a></p>
-            <ul>
-                <li><a href="https://accessibilityinsights.io/en/downloads/" target="blank">Microsoft Accessibility Insights</a></li>
-                <li><a href="https://paciellogroup.com/resources/contrastanalyser" tagret="blank">Colour Contrast Analyser by TPGI</a></li>
-                <li>Screen reader: VoiceOver for MacOS or <a href="https://www.nvaccess.org/download/" target="blank">NVDA for Windows</a></li>
-            </ul>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Today</h4>
-            <ul>
-              <li>Part 1: 55 minutes</li>
-              <li>Break: 10 minutes</li>
-              <li>Part 2: 55 minutes</li>
-            </ul>
-          </section>
-          
-          <section data-background="#fff">
-            <img src="assets/img-testing/overview.svg" style="float: right; width: 112px" alt="Overview">
-            <h4>Overview</h4>
-            <ul class="font-sm">
-              <li>Use of color</li>
-              <li>Text and Non-text contrast</li>
-              <li>Forms</li>
-            </ul>
-          </section>
-        </section>
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-
-        <section id="use-of-color">
-          <section data-background="#15828E">
-            <h2>Use of colour</h2>
-          </section>
-
-          <section data-background="#fff">
-            <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
-            <h4>Colour</h4>
-            <ul class="font-sm">
-              <li><b>As a</b>: user who has difficulty distinguishing between colours and shades</li>
-              <li><b>I need</b>: information that is conveyed with colour to also be available using another visual method</li>
-              <li><b>So that</b>: I can understand all information</li>
-            </ul>
-          </section>
-
-          <section data-background="#fff">
-            <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
-            <h4><a href="https://www.w3.org/TR/WCAG21/#use-of-color" target="_blank">1.4.1 Use of Color (A)</a></h4>
-            <p>Color is not used as the only visual means of:</p>
-            <ul class="font-sm">
-              <li>conveying information</li>
-              <li>indicating an action</li>
-              <li>prompting a response</li>
-              <li>distinguishing a visual element</li>
-            </ul>
-            <p class="font-xs"><b>Manual test</b> Chrome dev tools | Visual check</p>
-          </section>
-          
-          <section data-background="#fff">
-            <h4>Accessible to color vision impaired?</h4>
-            <img src="assets/img-testing/graph01.svg" style="width: 700px" alt="">
-          </section>
-          
-          <section data-background="#fff">
-            <h4>Gray scaled version</h4>
-            <img src="assets/img-testing/graph02.svg" style="width: 700px" alt="">
-          </section>
-          
-          <section data-background="#fff">
-            <h4>Accessible text alternative</h4>
-            <img src="assets/img-testing/graph03.svg" style="width: 450px" alt="">
-            <aside class="notes">
-              Can you tell which slice refers to South America?
-            </aside>
-          </section>
-          
-          <section data-background="#fff">
-            <h4> How could this chart be made more accessible?</h4>
-            <img src="assets/img-testing/chart-protonopia.png" style="width: 600px" alt="">
-          </section>
-          
-          <section data-background="#fff">
-            <h4>Accessible pattern version</h4>
-            <img src="assets/img-testing/chart-pattern.png" style="width: 600px" alt="">
-          </section>
-         
-         <section data-background="#fff">
-            <h4>Link example – pass or fail Use of color?</h4>
-            <img src="assets/img-testing/link-as-color.png" style="width: 600px" alt="">
-         </section>
-         
-         <section data-background="#fff">
-            <h4>Link contrast text requirement 3:1</h4>
-            <img src="assets/img-testing/link-contrast.png" style="width: 600px" alt="">
-         </section>
-          
-          <section data-background="#fff">
-            <h4>Link underline - best practice</h4>
-            <img src="assets/img-testing/link-underline.png" style="width: 800px" alt="">
-          </section>
-
-          <section data-background="#222">
-            <h3>Checklist for Use of Color</h3>
-          </section>
-          
-          <section data-background="#fff">
-            <table class="font-xs">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Criteria</th>
-                  <th>Details</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><input type="checkbox" class="checkbox-large" id="col"></td>
-                  <td>1.4.1 Use of Color</td>
-                  <td><label for="col">Information that is conveyed by colour differences must also be available using another visual means, such as text, underline or pattern</label></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          
-          <section data-background="#222">
-            <h3>Use of Color testing tools demo</h3>
-          </section>
-          
-          <section data-background="#fff">
-            <h4>Dev tools and ANDI bookmarklet</h4>
-            <img src="assets/img-testing/dev-tool-color.png" style="width: 700px" alt="">
-          </section>
-        </section>
-
-
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-        <section id="exercise-1">
-          <section data-background="#d3420d">
-            <h2>Exercise 1</h2>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Color blind empathy challenge</h4>
-            <ul>
-              <li>Type: Individual</li>
-              <li>Time: 5 mins</li>
-            </ul>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Instructions</h4>
-            <ol class="font-sm">
-              <li>Open the Chrome web developer tools (Fn > F12) and test any web page</li>
-              <li>Locate <b>More tools > Rendering > Emulate vision deficiencies > Achromatopsia</b></li>
-              <li>Note any issues you find and post in the chat as follows:
-                <ul>
-                  <li>1.4.1 Use of colour: (Describe issue)</li>
-                </ul>
-              </li>
-            </ol>
-          </section>
-        </section>
-
-
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-
-        <section id="contrast">
-          <section data-background="#15828E">
-            <h2>Contrast</h2>
-          </section>
-
-          <section data-background="#222">
-            <h3>Text contrast</h3>
-          </section>
-
-          <section data-background="#fff">
-            <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
-            <h4>Contrast</h4>
-            <ul class="font-sm">
-              <li><b>As a</b>: user with low vision</li>
-              <li><b>I need</b>: important text, graphics and user interface components to have good contrast</li>
-              <li><b>So that</b>: I can easily perceive all important information</li>
-            </ul>
-          </section>
-          </section>
-          
-          <!--  –––––––––––––––––––––––––
-          ******  SECTION ******
-          ––––––––––––––––––––––––––  -->
-
-                  <section id="exercise-2">
+    <head>
+        <meta charset="utf-8">
+            <title>Session 2 | Web Accessibility Testing for Teams</title>
+            <link rel="shortcut icon" href="favicon.ico">
+                <meta name="apple-mobile-web-app-capable" content="yes">
+                    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <link rel="stylesheet" href="dist/reveal.css">
+                                <link rel="stylesheet" href="dist/theme/intopia.css">
+                                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                                            <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+                                                <!-- Printing and PDF exports -->
+                                                <script>
+                                                    var link = document.createElement( 'link' );
+                                                    link.rel = 'stylesheet';
+                                                    link.type = 'text/css';
+                                                    link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+                                                    document.getElementsByTagName( 'head' )[0].appendChild( link );
+                                                </script>
+                                            </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                
+                <div class="menu">
+                    <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+                </div>
+                
+                <section data-background="#fff">
+                    <div class="instructions">
+                        <h3 class="instructions-heading">Slide instructions</h3>
+                        <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
+                        <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
+                        <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
+                        <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
+                        <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
+                    </div>
+                </section>
+                
+                
+                
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
+                
+                <section id="session-2">
                     <section data-background="#d3420d">
-                      <h2>Exercise 2</h2>
+                        <h1>Session 2</h1>
+                        <h5>Testing for Accessibility</h5>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <h4>What you will need</h4>
+                        <p>Download at: <a href="https://bit.ly/" target="_blank">bit.ly/</a></p>
+                        <ul>
+                            <li><a href="https://accessibilityinsights.io/en/downloads/" target="blank">Microsoft Accessibility Insights</a></li>
+                            <li><a href="https://paciellogroup.com/resources/contrastanalyser" tagret="blank">Colour Contrast Analyser by TPGI</a></li>
+                            <li>Screen reader: VoiceOver for MacOS or <a href="https://www.nvaccess.org/download/" target="blank">NVDA for Windows</a></li>
+                        </ul>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <h4>Today</h4>
+                        <ul>
+                            <li>Part 1: 55 minutes</li>
+                            <li>Break: 10 minutes</li>
+                            <li>Part 2: 55 minutes</li>
+                        </ul>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <img src="assets/img-testing/overview.svg" style="float: right; width: 112px" alt="Overview">
+                            <h4>Overview</h4>
+                            <ul class="font-sm">
+                                <li>Headings</li>
+                                <li>Landmarks</li>
+                                <li>Images - decorative and meaningful</li>
+                                <li>Links</li>
+                            </ul>
+                    </section>
+                </section>
+                
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
+                <section id="landmarks">
+                    <section data-background="#15828E">
+                        <h2>Landmarks</h2>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
+                            <h4>Landmark regions</h4>
+                            <ul class="font-sm">
+                                <li><b>As a</b> screen reader or keyboard user</li>
+                                <li><b>I want</b> to easily navigate to common regions of a page</li>
+                                <li><b>so that </b> I don’t have to navigate linearly through content</li>
+                            </ul>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
+                            <h4>Screen reader user</h4>
+                            <a class="font-sm" href="https://www.gov.uk/government/publications/understanding-disabilities-and-impairments-user-profiles/ashleigh-partially-sighted-screenreader-user">GOV.UK accessibility persona - Ashleigh</a>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <h4>Screen reader demo of navigating landmarks</h4>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/IhWMou12_Vk?start=65" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <p>There are <b>two ways</b> to identify landmarks, using HTML elements and ARIA roles.</p>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <p>Where possible, you should <b>always use HTML elements for landmarks</b> rather than ARIA roles as these elements have semantics and behaviour already built-in.</p>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <table class="font-xs">
+                            <thead>
+                                <tr>
+                                    <th>Landmark</th>
+                                    <th>ARIA role</th>
+                                    <th>HTML element</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Banner</td>
+                                    <td><code>role="banner"</code></td>
+                                    <td><code>&lt;header&gt;</code></td>
+                                </tr>
+                                <tr>
+                                    <td>ContentInfo</td>
+                                    <td><code>role="contentinfo"</code></td>
+                                    <td><code>&lt;footer&gt;</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Navigation</td>
+                                    <td><code>role="navigation"</code></td>
+                                    <td><code>&lt;nav&gt;</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Main</td>
+                                    <td><code>role="main"</code></td>
+                                    <td><code>&lt;main&gt;</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Complementary</td>
+                                    <td><code>role="complementary"</code></td>
+                                    <td><code>&lt;aside&gt;</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Region</td>
+                                    <td><code>role="region"</code></td>
+                                    <td><code>&lt;section&gt;</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Article</td>
+                                    <td><code>role="article"</code></td>
+                                    <td><code>&lt;article&gt;</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <h4>Landmark types</h4>
+                        <a href="http://www.w3.org/TR/wai-aria-practices/examples/landmarks/" target="_blank"><img src="assets/img-testing/landmarks.png" style="width: 500px" alt=""></a>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+                            <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" target="_blank">1.3.1 Info &amp; Relationships (A)</a></h4>
+                            <p>Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.</p></br></br></br>
+                            <p class="font-xs"><b>Semi-automated test</b> | Microsoft Insights > Landmarks | Visual check</p>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+                            <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks" target="_blank">2.4.1 Bypass blocks (A)</a></h4>
+                            <p>A mechanism is available to bypass blocks of content that are repeated on multiple Web pages.</p></br></br></br></br>
+                            <p class="font-xs"><b>Semi-automated test</b> | Microsoft Insights > Landmarks | Visual check</p>
+                    </section>
+                    
+                    <section data-background="#222">
+                        <h3>Landmarks testing tools demo</h3>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <h4>Microsoft Insights landmarks testing</h4>
+                        <img src="assets/img-testing/landmarks-ms.png" alt="">
+                    </section>
+                    
+                    <section data-background="#222">
+                        <h3>WCAG Checklist for Landmarks</h3>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <table class="font-xs">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Criteria</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="land"></td>
+                                    <td>1.3.1 Landmark purpose</td>
+                                    <td><label for="land">Landmark roles <b>must </b>correspond to the relevant page region</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="byp"></td>
+                                    <td>2.4.1 Bypass function</td>
+                                    <td><label for="byp">All page content <b>should </b>be contained by landmarks</label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <section data-background="#222">
+                        <h3>Best practice Checklist for Landmarks</h3>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <table class="font-xs">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Criteria</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="land-top"></td>
+                                    <td><label for="land-top">Main, complementary and contentinfo landmarks <b>should </b>be top level landmarks</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="land-1"></td>
+                                    <td><label for="land-1">There <b>should </b>only be one main, banner, contentinfo landmark</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="land-uni"></td>
+                                    <td><label for="land-uni">If a landmark role is used more than once on a page, it <b>should </b>have a unique label</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="land-name"></td>
+                                    <td><label for="land-name">Landmark role names should not have “landmark” as part of the label – it creates unnecessary duplication.</label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </section>
+                
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
+                
+                <section id="exercise-1">
+                    <section data-background="#d3420d">
+                        <h2>Exercise 1</h2>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <h4>Landmark testing</h4>
+                        <ul>
+                            <li>Type: Individual</li>
+                            <li>Time: 5 mins</li>
+                        </ul>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <h4>Instructions</h4>
+                        <ol class="font-sm">
+                            <li>Open any webpage</li>
+                            <li>Use <b>Microsoft Accessibility Insights > Adhoc tools > Landmarks</b></li>
+                            <li>Post any issues to the chat as follows:
+                                <ul>
+                                    <li>URL you tested</li>
+                                    <li>1.3.1 Info &amp; Relationships: (Describe issue)</li>
+                                    <li>Best practices: (Describe issue)</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </section>
+                </section>
+                
+                
+                
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
+                
+                <section id="headings">
+                    <section data-background="#15828E">
+                        <h2>Headings</h2>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
+                            <h4>Heading structure</h4>
+                            <ul class="font-sm">
+                                <li><b>As a</b>: screen reader user</li>
+                                <li><b>I want</b>: descriptive headings that are hierarchical structured like a table of contents</li>
+                                <li><b>So that</b>: I can understand the structure of content on a page and easily navigate to sections of content</li>
+                            </ul>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <p>According to <a href="https://webaim.org/projects/screenreadersurvey9/" target="_blank">WebAIM's 2021 Screen Reader User Survey:</a></p>
+                        <ul>
+                            <li>67.7% use headings to find information</li>
+                            <li>85.7% of respondents find heading levels very or somewhat useful</li>
+                        </ul>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+                            <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" target="_blank">1.3.1 Info &amp; Relationships (A)</a></h4>
+                            <p>Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.</p></br></br></br>
+                            <p class="font-xs"><b>Semi-automated test</b> | Microsoft Insights > Headings | Visual check</p>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+                            <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels" target="_blank">2.4.6 Headings and Labels (AA)</a></h4>
+                            <p>Headings and labels describe topic or purpose</p></br></br></br></br></br>
+                            <p class="font-xs"><b>Semi-automated test</b> Microsoft Insights > Headings | Visual check</p>
+                    </section>
+                    
+                    <section data-background="#222">
+                        <h3>Headings testing tools demo</h3>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <h4>Microsoft Insights headings testing</h4>
+                        <img src="assets/img-testing/headings-ms.png" alt="">
+                    </section>
+                    
+                    <section data-background="#222">
+                        <h3>WCAG Checklist for Headings</h3>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <table class="font-xs">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Criteria</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="head"></td>
+                                    <td>2.4.6 Heading purpose</td>
+                                    <td><label for="head">Headings <b>must </b>describe the topic or purpose of its content</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="head-lev"></td>
+                                    <td>1.3.1 Heading level</td>
+                                    <td><label for="head-lev">Heading level markup (H1-H6) <b>must </b>match the visual presentation within the structure</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="head-det1"></td>
+                                    <td>1.3.1 Heading determinable</td>
+                                    <td><label for="head-det1">Heading markup <b>must </b>be used for visual headings</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="head-det2"></td>
+                                    <td>1.3.1 Heading determinable (continued)</td>
+                                    <td><label for="head-det2">Heading markup <b>must not </b>be used when content is not a visual heading</label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <section data-background="#222">
+                        <h3>Best Practice Checklist for Headings</h3>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <table class="font-xs">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Criteria</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="head-skip"></td>
+                                    <td><label for="head-skip">Heading levels <b>should </b>only increase by one</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="head-1"></td>
+                                    <td><label for="head-1">Page <b>should </b>contain one heading level 1</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="head-sec"></td>
+                                    <td><label for="head-sec">Each new section of content <b>should </b>be identified by a descriptive heading</label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </section>
+                
+                
+                
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
+                
+                
+                
+                <section id="exercise-2">
+                    <section data-background="#d3420d">
+                        <h2>Exercise 2</h2>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <h4>Testing headings</h4>
+                        <ul>
+                            <li>Type: Individual</li>
+                            <li>Time: 5 mins</li>
+                        </ul>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <h4>Instructions</h4>
+                        <ol class="font-sm">
+                            <li>Open any webpage and run <b>Microsoft Insights Assessment</b> to test for heading issues</li>
+                            <li>Open <b>Headings</b> section</li>
+                            <li>Post any heading issues you find to the chat as follows:
+                                <ul>
+                                    <li>URL you tested</li>
+                                    <li>1.3.1 Info &amp; Relationships: (Describe issue)</li>
+                                    <li>2.4.6 Heading and Labels: (Describe issue)</li>
+                                    <li>Best practices: (Describe issue)</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </section>
+                </section>
+                
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
+                
+                
+                <section id="images">
+                    <section data-background="#15828E">
+                        <h2>Images</h2>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
+                            <h4>Images</h4>
+                            <ul class="font-sm">
+                                <li><b>As a</b>: low vision or screen reader user</li>
+                                <li><b>I need</b>: informative images to be described and decorative images to be ignored</li>
+                                <li><b>So that</b>: I can understand the image purpose and not be distracted by unnecessary descriptions for decorative images</li>
+                            </ul>
                     </section>
 
-            <section data-background="#fff">
-              <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
-              <h4>Partially sighted screen magnifier user</h4>
-              <img src="assets/img-testing/Persona=Claudia.svg" alt="Claudia persona">
-              </br>
-              </br>
-              <a class="font-sm" href="https://www.gov.uk/government/publications/understanding-disabilities-and-impairments-user-profiles/claudia-partially-sighted-screen-magnifier-user">GOV.UK accessibility persona</a>
-            </section>
-
-          <section data-background="#fff">
-            <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
-            <h4><a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank">1.4.3 Contrast (minimum)(A)</a></h4>
-            <p>The visual presentation of text and images of text has a contrast ratio of at least 4.5:1 except for:</p>
-            <ul class="font-sm">
-              <li><b>Large-scale </b>text and images of text</li>
-              <li>Text and images of text that are part of an <b>inactive UI component</b> or are <b>pure decoration</b></li>
-              <li>Text that is part of a <b>logotype</b></li>
-            </ul>
-            <p class="font-xs"><b>Semi-automated test</b> | MS Insights | Visual check</p>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Contrast - normal text</h4>
-            <p>Normal text must have a contrast ratio of <b>at least</b> 4.5:1<br>
-            Normal text is <b>less than</b> 14 point bold or 18 point</p>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Contrast - large text</h4>
-            <p>Large text must have a contrast ratio of <b>at least</b> 3:1<br>
-            Large text is <b>at least</b> 14 point bold or 18 point</p>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Contrast - statistics</h4>
-            <img src="assets/img-testing/webaim-contrast.png" style="width: 650px" alt="">
-          </section>
-
-          <section data-background="#fff">
-            <p>According to the <a href="https://webaim.org/projects/million/#contrast" target="_blank">WebAIM 2020 global survey</a> of 1 million homepages, <b>86.4%</b> failed contrast requirements</p>  
-          </section>
-
-          <section data-background="#fff">
-            <table class="font-xs">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Criteria</th>
-                  <th>Details</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><input type="checkbox" class="checkbox-large" id="txt-con"></td>
-                  <td>1.4.3 Contrast minimum</td>
-                  <td><label for="txt-con">Normal text must have a contrast ratio of at least 4:5:1 (including images of text)</label></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox" class="checkbox-large" id="txt-con-lge"></td>
-                  <td>1.4.3 Contrast minimum</td>
-                  <td><label for="txt-con-lge">Large text must have a contrast ratio of at least 3:1 </label></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section data-background="#222">
-            <h3>Testing text contrast demo</h3>
-          </section>
-        </section>
-
-
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-
-
-        <section id="exercise-3">
-          <section data-background="#d3420d">
-            <h2>Exercise 3</h2>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Text contrast challenge</h4>
-            <ul>
-              <li>Type: Individual</li>
-              <li>Time: 5 mins</li>
-            </ul>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Instructions</h4>
-            <ol class="font-sm">
-              <li>Open any web page and run <b>MS Insights </b>to check for text contrast fails.</li>
-              <li>Post any contrast fails in the chat as follows:
-                <ul class="font-sm">
-                  <li>URL you tested</li>
-                  <li>1.4.3 Contrast minimum: (Describe issue)</li>
-                </ul>
-              </li>
-            </ol>
-          </section>
-        </section>
-
-
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-        <section id="non-text-contrast">
-          <section data-background="#15828E">
-            <h2>Non-text contrast</h2>
-          </section>
-
-          <section data-background="#fff">
-            <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
-            <h4>Contrast</h4>
-            <ul class="font-sm">
-              <li><b>As a</b>: user with low vision</li>
-              <li><b>I need</b>: important graphics, icons, states and uotlines for user interface components to have good contrast</li>
-              <li><b>So that</b>: I can easily perceive all important information</li>
-            </ul>
-          </section>
-
-          <section data-background="#fff">
-            <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
-            <h4>1.4.11 Non-text contrast (AA)</h4>
-            <p>The visual presentation of the following must have a contrast ratio of at least 3:1 against adjacent color(s):</p>
-            <ul class="font-sm">
-              <li><b>User Interface Components</b> Visual information required to identify user interface components and states</li>
-              <li><b>Graphical Objects</b> Parts of graphics required to understand the content</li>
-            </ul>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Exceptions</h4>
-            <ul class="font-sm">
-              <li>logos</li>
-              <li>browser default focus indicators</li>
-              <li>disabled components</li>
-            </ul>
-            <p class="font-xs"><b>Manual test</b> | Developer tools | Colour Contrast Analyser</p>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Contrast - borders, outlines, states</h4>
-            <img src="assets/img-testing/non-text-dont.png" alt="">
-            <img src="assets/img-testing/non-text-do.png" alt="">
-          </section>
-
-          <section data-background="#fff">
-            <h4>Contrast - icons</h4>
-            <img src="assets/img-testing/icon-contrast-dont.png" alt="">
-            <img src="assets/img-testing/icon-contrast-do.png" alt="">
-          </section>
-
-          <section data-background="#fff">
-            <h4>Contrast - graphics</h4>
-            <p class="font-sm"><b>Challenge:</b> What meaning is being conveyed by these icons?</p>
-            <img src="assets/img-testing/graph-contrast-dont.png" alt="">
-          </section>
-
-          <section data-background="#fff">
-            <h4>Improved contrast - graphics</h4>
-            <img src="assets/img-testing/graph-contrast-do.png" alt="">
-          </section>
-
-          <section data-background="#222">
-            <h3>Checklist for non-text contrast</h3>
-          </section>
-
-          <section data-background="#fff">
-            <table class="font-xs">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Criteria</th>
-                  <th>Details</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><input type="checkbox" class="checkbox-large" id="non-txt-con"></td>
-                  <td>1.4.11 Non-text contrast</td>
-                  <td><label for="non-txt-con">Visual information that is necessary for a user to identify a control, know how to use it, or what state it is on must have a contrast ratio of at least 3:1</label></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox" class="checkbox-large" id="foc-con"></td>
-                  <td>1.4.11 Non-text contrast</td>
-                  <td><label for="foc-con">Custom focus styles must have a contrast ratio of at least 3:1</label></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section data-background="#222">
-            <h3>Non-text contrast demo</h3>
-          </section>
-        </section>
-
-
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-
-
-        <section id="exercise-4">
-          <section data-background="#d3420d">
-            <h2>Exercise 4</h2>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Non-text contrast challenge</h4>
-            <ul>
-              <li>Type: Individual</li>
-              <li>Time: 5 mins</li>
-            </ul>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Instructions</h4>
-            <ol class="font-sm">
-              <li>Open your organisation/product homepage and use <b>Colour Contrast Analyser </b> and <b>developer tools </b>to check for non-text contrast fails.</li>
-              <li>Test the contrast of outlines, borders, states, graphics and icons</li>
-              <li>Post any contrast fails in the chat as follows:
-                <ul>
-                  <li>URL you tested</li>
-                  <li>1.4.11 Non-text contrast: (Describe issue)</li>
-                </ul>
-              </li>
-            </ol>
-          </section>
-
-          <section data-background="#fff">
-            <h4>How to test focus state contrast</h4>
-            <img src="assets/img-testing/CZI_devfocus.png" alt="">
-            <ol class="font-xs">
-              <li>Enable the <b>Focus checkbox </b>in the dev tools styles panel to identify the focus style colour.</li>
-              <li>Use the <b>Colour contrast analyser </b> or <a href="https://contrast-finder.tanaguru.com/" target="_blank">Tanaguru contrast finder</a> to test contrast against the background.</li>
-            </ol>
-          </section>
-        </section>
-
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-        <section id="labels-instructions">
-          <section data-background="#15828E">
-            <h2>Form Labels &amp; Instructions</h2>
-          </section>
-
-          <section data-background="#222">
-            <h3>Labels</h3>
-          </section>
-
-          <section data-background="#fff">
-            <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
-            <h4>Form labels</h4>
-            <ul class="font-sm">
-              <li><b>As a</b>: screen reader user</li>
-              <li><b>I want</b>: form fields to have descriptive and unique labels that are linked to form fields in code</li>
-              <li><b>So that</b>: when I tab to a form field, I hear the label</li>
-            </ul>
-          </section>
-
-          <section data-background="#fff">
-            <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
-            <h4>Form labels</h4>
-            <ul class="font-sm">
-              <li><b>As a</b>: Dragon Naturally Speaking user</li>
-              <li><b>I want</b>: form fields to have descriptive and unique labels that are linked to form fields in code</li>
-              <li><b>So that</b>: I can navigate to a form field by its label</li>
-            </ul>
-          </section>
-
-          <section data-background="#fff">
-            <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
-            <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" target="_blank">1.3.1 Info and Relationships (A)</a></h4>
-            <p>Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.</p>
-            <p class="font-xs"><b>Semi-automated test</b> Axe | Screen reader | Visual check</p>
-          </section>
-
-          <section data-background="#fff">
-            <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
-            <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels" target="_blank">2.4.6 Headings and Labels (AA)</a></h4>
-            <p>Headings and labels describe topic or purpose</p>
-            <p class="font-xs"><b>Semi-automated test</b> Axe | Screen reader | Visual check</p>
-          </section>
-
-          <section data-background="#fff">
-            <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
-            <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions" target="_blank">3.3.2 Labels or Instructions (A)</a></h4>
-            <p>Labels or instructions are provided when content requires user input.</p>
-            <p class="font-xs"><b>Semi-automated test</b> Axe | Screen reader | Visual check</p>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Clear visual labels</h4>
-            <p>Labels are descriptive and <b>should </b>be near form fields</p>
-            <img src="assets/img-testing/form01.svg" style="width: 380px" alt="">
-          </section>
-
-          <section data-background="#fff">
-            <h4>Labels linked in code</h4>
-            <img src="assets/img-testing/linkedcode.png" style="width: 850px" alt="">
-          </section>
-
-          <section data-background="#222">
-            <h3>The placeholder attribute</h3>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Placeholder used as a label or instructions</h4>
-            <p class="font-sm">Can you spot the issues?</p>
-            <img src="assets/img-testing/placeholder.gif" alt="">
-          </section>
-
-          <section data-background="#fff">
-            <p>Placeholder text  <b>must not </b>be used as a replacement for labels or instructions:</p>
-            <ul class="font-sm">
-              <li>Not reliably available to all screen readers</li>
-              <li>Often low contrast</li>
-              <li>Disappears when typing</li>
-            </ul>
-          </section>
-
-          <section data-background="#222">
-            <h3>Checklist for form labels</h3>
-          </section>
-
-          <section data-background="#fff">
-            <table class="font-xs">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Criteria</th>
-                  <th>Details</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><input type="checkbox" class="checkbox-large" id="fflab"></td>
-                  <td>1.3.1 Programmatic label</td>
-                  <td><label for="fflab">Form fields must have associated labels that are properly linked in code (checked by axe)</label></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox" class="checkbox-large" id="labdesc"></td>
-                  <td>3.3.2 Labels or Instructions</td>
-                  <td><label for="labdesc">Labels or instructions are provided when content requires user input</label></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox" class="checkbox-large" id="headings-labels"></td>
-                  <td>2.4.6 Headings and Labels</td>
-                  <td><label for="headings-labels">Headings and labels describe topic or purpose</label></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox" class="checkbox-large" id="labpos"></td>
-                  <td>Best practice</td>
-                  <td><label for="labpos">Labels should be near the form field</label></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section data-background="#222">
-            <h3>Instructions</h3>
-          </section>
-
-          <section data-background="#fff">
-            <img src="assets/img-testing/overview.svg" style="float: right; width: 112px" alt="Overview">
-            <h4>Instructions</h4>
-            <ul class="font-sm">
-              <li><b>As a</b>: user</li>
-              <li><b>I want</b>: instructions about required fields or input restrictions</li>
-              <li><b>So that</b>: I have all the information I need to complete a form without causing errors</li>
-            </ul>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Required/Optional fields</h4>
-            <p>All required/optional fields are identified</p>
-            <img src="assets/img-testing/form02.svg" style="width: 380px" alt="">
-          </section>
-
-          <section data-background="#fff">
-            <h4>Spot any issues?</h4>
-            <img  src="assets/img-testing/form03.svg" style="width: 380px" alt="">
-          </section>
-
-          <section data-background="#fff">
-            <h4>Input restrictions</h4>
-            <p>Input restrictions are clearly indicated</p>
-            <img src="assets/img-testing/form04.svg" style="width: 380px" alt="">
-          </section>
-
-          <section data-background="#fff">
-            <img src="assets/img-testing/insttop.png" style="float: right; width: 350px"  alt="">
-            <h4>1. Instructions at top of the form</h4>
-            <p>Ensures that they will be read before navigating to the input and entering forms mode</p>
-          </section>
-
-          <section data-background="#fff">
-            <h4>2. Instructions within the label</h4>
-            <img src="assets/img-testing/form05.svg" style="width: 500px" alt="">
-          </section>
-
-          <section data-background="#222">
-<pre><code contenteditable="true">&lt;label for="pwd"&gt;My Account password &lt;/label&gt;
-&lt;span <span class="codeHighlight">id="pwr"</span>&gt;At least 6 alphanumeric characters&lt;/span&gt;
-&lt;input type="text" id="pwd" <span class="codeHighlight">aria-describedby="pwr"</span>&gt;
-</code></pre>
-          </section>
-    
-          <section data-background="#222">
-            <h3>Checklist for form instructions</h3>
-          </section>
-
-          <section data-background="#fff">
-            <table class="font-xs">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Details</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><input type="checkbox" class="checkbox-large" id="req"></td>
-                  <td><label for="req">Required and/or optional fields must be clearly labelled</label></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox" class="checkbox-large" id="restr"></td>
-                  <td><label for="restr">Fields that require specific data formats or rules must have clearly described instructions</label></td>
-                </tr>
-                 <tr>
-                  <td><input type="checkbox" class="checkbox-large" id="inst"></td>
-                  <td>
-                    <label for="inst">Instructions must be either</label>:
-                    <ul>
-                      <li>at the start of the form</li>
-                      <li>within the label or</li>
-                      <li>linked to the associated form field in code</li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-        </section>
-
-
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-
-
-        <section id="exercise-5">
-          <section data-background="#d3420d">
-            <h2>Exercise 5</h2>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Testing forms activity</h4>
-            <ul>
-              <li>Type: Individual</li>
-              <li>Time: 5 mins</li>
-            </ul>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Instructions</h4>
-            <ol class="font-sm">
-              <li>Open the “How can we help” dialog on the Along home page</li>
-              <li>Open your <b>dev tools </b>to test form labels</li>
-              <li>Post in the chat any form fields that are unlabelled or that have related instructions that are not announced </li>
-            </ol>
-          </section>
-        </section>
-
-
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-
-
-        <section id="accessible-role">
-          <section data-background="#15828E">
-            <h2>Accessible name, role and values</h2>
-          </section>
-
-          <section data-background="#fff">
-            <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
-            <h4>Name, role and current state</h4>
-            <ul class="font-sm">
-              <li><b>As a</b> screen reader user</li>
-              <li><b>I want</b>: to know the name, role and current state of a form control</li>
-              <li><b>So that</b>: I know what I am interacting with and the current state (checked, collapsed etc) so that I do not generate an error</li>
-            </ul>
-          </section>
-
-          <section data-background="#fff">
-            <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
-            <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value" target="_blank">4.1.2 Name, role, value (A)</a></h4>
-            <p>For all user interface components ... the name, role, states, properties and values ... can be programmatically determined and is available to user agents, including assistive technologies.</p>
-            <p class="font-xs"><b>Semi-automated test</b>| Dev tools | Visual check</p>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Inspecting the Accessibility tab</h4>
-            <img src="assets/img-testing/5_AccessibilityTab.png"  alt="">
-          </section>
-        </section>
-
-
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-
-
-        <section id="exercise-6">
-          <section data-background="#d3420d">
-            <h2>Exercise 6</h2>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Name, role, value activity</h4>
-            <ul>
-              <li>Type: Individual</li>
-              <li>Time: 6 mins</li>
-            </ul>
-          </section>
-
-          <section data-background="#fff">
-            <h4>Instructions</h4>
-            <ol class="font-sm">
-              <li>Open a form on your organisation site</li>
-              <li>Open your <b>dev tools </b>to test if the form fields name, role and states are announced</li>
-              <li>Post any failures in the chat as follows:
-                <ul class="font-sm">
-                  <li>4.1.2 Name, role, value (describe element)</li>
-                </ul>
-              </li>
-            </ol>
-          </section>
-        </section>
-
-<!--  –––––––––––––––––––––––––
-******  SECTION ******
-––––––––––––––––––––––––––  -->
-
-
-
-        <section id="session-3-review">
-          <section data-background="#d3420d">
-            <h2>Session 2 review</h2>
-          </section>
-          
-          <section data-background="#fff">
-            <img src="assets/img-testing/quiz.svg" style="float: right; width: 112px;" alt="Quiz icon">
-            <h4>Competition</h4>
-            <p><a href="https://myquiz.org/Lectures" target="_blank">How much did you learn?</a></p>
-          </section>
-        </section>
-      </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
-    <script src="dist/reveal.js"></script>
-    <script src="plugin/notes/notes.js"></script>
-
-    <script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-				transition: 'none',
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealNotes ]
-			});
-		</script>
-
-  </body>
+                    <section data-background="#fff">
+                        <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+                            <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" target="_blank">1.1.1 Non-text content (A)</a></h4>
+                            <p>All non-text content that is presented to the user has a text alternative that serves the equivalent purpose</p>
+                            <p class="font-xs"><b>Semi-automated test</b> MS Insights | Visual check</p>
+                    </section>
+                </section>
+                
+                
+                
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
+                
+                
+                
+                <section id="decorative-meaningful">
+                    <section data-background="#15828E">
+                        <h2>Decorative, informative and functional images</h2>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <table class="font-xs">
+                            <thead>
+                                <tr>
+                                    <th>Image type</th>
+                                    <th>Purpose</th>
+                                    <th>Accessible name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Decorative</td>
+                                    <td>An image which has no content-related purpose</td>
+                                    <td>Use an empty <code>alt</code>, or apply as a background image via CSS</td>
+                                </tr>
+                                <tr>
+                                    <td>Informative</td>
+                                    <td>An image that contains valuable information and adds to the content</td>
+                                    <td>Requires an <code>alt</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Functional</td>
+                                    <td>An image which is part of a UI control - such as a button icon or link</td>
+                                    <td>Requires an <code>alt</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <section data-background="#222">
+                        <h3>Decorative images</h3>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <p>Decorative images should be <b>ignored by screen readers</b>.</p>
+                        <img src="assets/img-testing/4_decorative.png" style="width: 500px" alt="">
+                    </section>
+                    
+                    <section data-background="#222">
+                        <h3>Informative images</h3>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <p>Informative images should <b>include a text alternative</b> that conveys the meaning or content that is displayed visually.</p>
+                        <img src="assets/img-testing/4_lego.png" style="width: 400px" alt="Millenium Falcon made of Lego">
+                    </section>
+                    
+                    <section data-background="#222">
+                        <pre><code contenteditable="true">&lt;img src="" <span class="codeHighlight">alt="Millenium Falcon Lego set"</span>&gt;</code></pre>
+                    </section>
+                    
+                    <section data-background="#222">
+                        <h3>Functional images</h3>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <p>If an image is used as a link or button, then it <b>should include a text alternative</b> that describes:</p>
+                        <ul class="font-sm">
+                            <li>The function of the link (where it will take you)</li>
+                            <li>The function of the button (what it will do)</li>
+                        </ul>
+                    </section>
+                    
+                    <section data-background="#222">
+                        <pre><code contenteditable="true">&lt;button <span class="codeHighlight">aria-label="Close"</span>&gt;X&lt;/button&gt;</code></pre>
+                    </section>
+                    
+                    <section data-background="#222">
+                        <pre><code contenteditable="true">&lt;a href="#"&gt;
+                            &lt;img src="" <span class="codeHighlight">alt=""</span>&gt;
+                            Millemnium Falcon Lego set
+                            &lt;/a&gt;</code></pre>
+                    </section>
+                </section>
+                
+                
+                
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
+                
+                
+                
+                <section id="complex-composite-images">
+                    <section data-background="#15828E">
+                        <h2>Complex and composite images</h2>
+                    </section>
+                    
+                    <section data-background="#222">
+                        <h3>Complex images</h3>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <p>Complex images such as <b>graphs or infographics</b> should have:</p>
+                        <ul class="font-sm">
+                            <li>a short description in the alt attribute</li>
+                            <li>an onscreen link to text description either in-page (recommended) or a new page link</li>
+                        </ul>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <a href="https://webaim.org/resources/designers/#infographic" target="_blank"><img src="assets/img-testing/4_infograph.png" style="float: right; width: 200px" alt=""></a>
+                        <h4>WebAIM Accessible infograph</h4>
+                        <ul class="font-sm"><li>Short description in alt text</li>
+                            <li>In-page full text version</li>
+                        </ul>
+                    </section>
+                    
+                    <section data-background="#222">
+                        <h3>Composite images</h3>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <p>Ensure the text alternative for one of the images <b>describes the image as a whole</b>.</p>
+                        <img src="assets/img-testing/4_comp.png" style="width: 400px" alt="3 stars out of five">
+                    </section>
+                    
+                    <section data-background="#222">
+                        <pre><code contenteditable="true">&lt;img src="fullstar.png" alt=""&gt;
+                            &lt;img src="fullstar.png" alt=""&gt;
+                            &lt;img src="fullstar.png" alt=""&gt;
+                            &lt;img src="emptystar.png" alt=""&gt;
+                            &lt;img src="emptystar.png" <span class="codeHighlight">alt="3 stars out of 5"</span>&gt;</code></pre>
+                    </section>
+                    
+                    <section data-background="#222">
+                        <h3>Checklist for images</h3>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <table class="font-xs">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Criteria</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="imgname"></td>
+                                    <td>1.1.1 Informative image name</td>
+                                    <td><label for="imgname">The accessible name/description must provide an equivalent description of the image</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="decname"></td>
+                                    <td>1.1.1 Decorative image ignored</td>
+                                    <td><label for="decname">There must not be an accessible name/description for a decorative image</label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </section>
+                
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
+                
+                <section id="exercise-3">
+                    <section data-background="#d3420d">
+                        <h2>Exercise 3</h2>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <h4>Image testing</h4>
+                        <ul>
+                            <li>Type: Individual</li>
+                            <li>Time: 10 mins</li>
+                        </ul>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <h4>Instructions</h4>
+                        <ol class="font-sm">
+                            <li>Open up your organisation/product homepage</a></li>
+                            <li>Using <b>Microsoft Insights > Images 14.1 ands 14.2</b> test the images on the page</li
+                                <li>Post in the chat any failures you find as follows:
+                                <ul>
+                                    <li>1.1.1 Non-text content (describe element)</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </section>
+                </section>
+                
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
+                
+                <section id="links">
+                    <section data-background="#15828E">
+                        <h2>Links</h2>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
+                            <h4>Links</h4>
+                            <ul class="font-sm">
+                                <li><b>As a</b>: screen reader user or user with motor or cognitive impairment</li>
+                                <li><b>I want</b>: links to clearly describe where they will take me, and</li>
+                                <li><b>I want</b>: links that take me to the same page to be labelled the same</li>
+                                <li><b>So that</b>: it is easy for me to decide if I want to follow a link</li>
+                            </ul>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+                            <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context" target="_blank">2.4.4 Link purpose (In context) (A)</a></h4>
+                            <p>The purpose of each link can be determined from the <b>link text alone</b> or from the <b>link text together with its context</b></p>
+                            <p class="font-xs"><b>Semi-automated test</b> | MS Insights | Visual check</p>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <h4>Link text is meaningful on its own</h4>
+                        <img src="assets/img-testing/linkonown.png" alt="">
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <h4>Link text is meaningful when combined with its context</h4>
+                        <img src="assets/img-testing/linkcontext.png" alt="">
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <h4>Links that open tabs/windows/files are indicated</h4>
+                        <img src="assets/img-testing/extlinks.png" style="width: 600px" alt="">
+                            <img src="assets/img-testing/fileformats.png" style="width: 550px" alt="">
+                            </section>
+                    
+                    <section data-background="#222">
+                        <h3>Checklist for links</h3>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <table class="font-xs">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Criteria</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="link-purp"></td>
+                                    <td>2.4.4 Link purpose</td>
+                                    <td><label for="link-purp">The link purpose <b>must </b>be clear on its own (recommended) OR when read with the enclosing sentence, paragraph, list item or table cell and associated header cell(s)</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="link-not"></td>
+                                    <td>Link notification</td>
+                                    <td><label for="link-not">Links that open in a new window or open a different file format <b>should </b>include that as part of the link text</label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </section>
+                
+                
+                
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
+                
+                
+                
+                <section id="skip-links">
+                    <section data-background="#15828E">
+                        <h2>Skip links</h2>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
+                            <h4>Skip links</h4>
+                            <ul class="font-sm">
+                                <li><b>As a</b>: screen reader user or keyboard user</li>
+                                <li><b>I want</b>: to skip over content that is repeated across your website</li>
+                                <li><b>So that</b>: I don’t have to navigate through it each time</li>
+                            </ul>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+                            <h4><a href="https://www.w3.org/TR/WCAG21/#bypass-blocks" target="_blank">2.4.1 Bypass Blocks (A)</a></h4>
+                            <p>A mechanism is available to bypass blocks of content that are repeated on multiple Web pages</p>
+                            <p class="font-xs"><b>Semi-automated test</b> | Keyboard | Manual check</p>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <h4>Skip link example</h4>
+                        <img src="assets/img-testing/skiplink.png" style="width: 700px" alt="">
+                    </section>
+                    
+                    <section data-background="#222">
+                        <h3>Checklist for skip links</h3>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <table class="font-xs">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Criteria</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="slink-pur"></td>
+                                    <td>2.4.4 Skip link purpose</td>
+                                    <td><label for="slink-pur">The link description must say that it links to the main content</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="slink-fun"></td>
+                                    <td>2.4.1 Skip link function</td>
+                                    <td><label for="slink-fun">Activating the link must move focus to the main content</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="slink-foc"></td>
+                                    <td>2.4.7 Focus visible</td>
+                                    <td><label for="slink-foc">The link must be either always visible or when it has keyboard focus</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="checkbox-large" id="slink-pos"></td>
+                                    <td>Skip link position</td>
+                                    <td><label  for="slink-pos">The skip-link should be the first focusable control on the page</label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </section>
+                
+                
+                
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
+                
+                
+                
+                <section id="exercise-4">
+                    <section data-background="#d3420d">
+                        <h2>Exercise 4</h2>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <h4>Link testing challenge</h4>
+                        <ul>
+                            <li>Type: Individual</li>
+                            <li>Time: 5 mins</li>
+                        </ul>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <h4>Instructions</h4>
+                        <ol class="font-sm">
+                            <li>Use your <b>keyboard </b>and <b> MS Insights</b> to test links on your organisation/product homepage</a></li>
+                            <li>Post any issues you find to the chat as follows:
+                                <ul class="font-sm">
+                                    <li>2.4.4 Link purpose: (Describe issue)</li>
+                                    <li>2.4.7 Focus visible:(Describe issue)</li>
+                                    <li>2.4.1 Bypass Blocks:(Describe issue)</li>
+                                    <li>Best practice:(Describe issue)</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </section>
+                </section>
+                
+                
+                
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
+                
+                
+                
+                <section id="session-2-review">
+                    <section data-background="#d3420d">
+                        <h2>Session 2 review</h2>
+                    </section>
+                    
+                    <section data-background="#fff">
+                        <img src="assets/img-testing/quiz.svg" style="float: right; width: 112px;" alt="Quiz icon">
+                            <h4>That's a wrap!</h4>
+                            <p><a href="https://myquiz.org/Lectures" target="_blank">How much did you learn?</a></p>
+                    </section>
+                </section>
+            </div>
+            
+            
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        
+        <script>
+            // More info about initialization & config:
+            // - https://revealjs.com/initialization/
+            // - https://revealjs.com/config/
+            Reveal.initialize({
+                hash: true,
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                transition: 'none',
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [ RevealNotes ]
+            });
+        </script>
+        
+    </body>
 </html>
