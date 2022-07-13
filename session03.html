@@ -58,9 +58,7 @@
             <h4>What you will need</h4>
             <p>Download at: <a href="https://bit.ly/" target="_blank">bit.ly/</a></p>
             <ul>
-                <li><a href="https://accessibilityinsights.io/en/downloads/" target="blank">Microsoft Accessibility Insights</a></li>
-                <li><a href="https://paciellogroup.com/resources/contrastanalyser" tagret="blank">Colour Contrast Analyser by TPGI</a></li>
-                <li>Screen reader: VoiceOver for MacOS or <a href="https://www.nvaccess.org/download/" target="blank">NVDA for Windows</a></li>
+                <li><a href="https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd?utm_source=deque.com&utm_medium=referral&utm_campaign=axe-browser-extensions_hero" target="blank">Axe by Deque</a></li>
             </ul>
           </section>
           
@@ -70,6 +68,7 @@
             <ul>
               <li>Form labels and Instructions</li>
               <li>Accessible Name, Role and Value</li>
+              <li>Form errors</li>
             </ul>
           </section>
         </section>
@@ -80,11 +79,7 @@
 
                 <section id="labels-instructions">
                   <section data-background="#15828E">
-                    <h2>Form Labels &amp; Instructions</h2>
-                  </section>
-
-                  <section data-background="#222">
-                    <h3>Labels</h3>
+                    <h2>Form Labels</h2>
                   </section>
 
                   <section data-background="#fff">
@@ -109,13 +104,6 @@
 
                   <section data-background="#fff">
                     <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
-                    <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" target="_blank">1.3.1 Info and Relationships (A)</a></h4>
-                    <p>Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.</p>
-                    <p class="font-xs"><b>Semi-automated test</b> Axe | Screen reader | Visual check</p>
-                  </section>
-
-                  <section data-background="#fff">
-                    <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
                     <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels" target="_blank">2.4.6 Headings and Labels (AA)</a></h4>
                     <p>Headings and labels describe topic or purpose</p>
                     <p class="font-xs"><b>Semi-automated test</b> Axe | Screen reader | Visual check</p>
@@ -132,11 +120,6 @@
                     <h4>Clear visual labels</h4>
                     <p>Labels are descriptive and <b>should </b>be near form fields</p>
                     <img src="assets/img-testing/form01.svg" style="width: 380px" alt="">
-                  </section>
-
-                  <section data-background="#fff">
-                    <h4>Labels linked in code</h4>
-                    <img src="assets/img-testing/linkedcode.png" style="width: 850px" alt="">
                   </section>
 
                   <section data-background="#222">
@@ -156,6 +139,18 @@
                       <li>Often low contrast</li>
                       <li>Disappears when typing</li>
                     </ul>
+                  </section>
+                  
+                  <section data-background="#fff">
+                    <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+                    <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" target="_blank">1.3.1 Info and Relationships (A)</a></h4>
+                    <p>Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.</p>
+                    <p class="font-xs"><b>Semi-automated test</b> Axe | Screen reader | Visual check</p>
+                  </section>
+
+                  <section data-background="#fff">
+                    <h4>Labels linked in code</h4>
+                    <img src="assets/img-testing/linkedcode.png" style="width: 850px" alt="">
                   </section>
 
                   <section data-background="#222">
@@ -195,9 +190,44 @@
                       </tbody>
                     </table>
                   </section>
+            </section>
+                
+                
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
 
-                  <section data-background="#222">
-                    <h3>Instructions</h3>
+
+                        <section id="exercise-1">
+                          <section data-background="#d3420d">
+                            <h2>Exercise 1</h2>
+                          </section>
+
+                          <section data-background="#fff">
+                            <h4>Testing form labels activity</h4>
+                            <ul>
+                              <li>Type: Individual</li>
+                              <li>Time: 5 mins</li>
+                            </ul>
+                          </section>
+
+                          <section data-background="#fff">
+                            <h4>Instructions</h4>
+                            <ol class="font-sm">
+                              <li>Open the page your instructor shares with you</li>
+                              <li>Open your <b>dev tools </b>to test form labels</li>
+                              <li>Post in the chat any form fields that are unlabelled</li>
+                            </ol>
+                          </section>
+                        </section>
+
+                
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
+                <section>
+                  <section data-background="#15828E">
+                    <h2>Form Instructions</h2>
                   </section>
 
                   <section data-background="#fff">
@@ -292,11 +322,11 @@
 
                 <section id="exercise-1">
                   <section data-background="#d3420d">
-                    <h2>Exercise 1</h2>
+                    <h2>Exercise 2</h2>
                   </section>
 
                   <section data-background="#fff">
-                    <h4>Testing forms activity</h4>
+                    <h4>Testing form instructions activity</h4>
                     <ul>
                       <li>Type: Individual</li>
                       <li>Time: 5 mins</li>
@@ -308,7 +338,7 @@
                     <ol class="font-sm">
                       <li>Open the page your instructor shares with you</li>
                       <li>Open your <b>dev tools </b>to test form labels</li>
-                      <li>Post in the chat any form fields that are unlabelled or that have related instructions that are not announced </li>
+                      <li>Post in the chat any form fields have related instructions that are not linked in code</li>
                     </ol>
                   </section>
                 </section>
@@ -355,18 +385,16 @@
         ******  SECTION ******
         ––––––––––––––––––––––––––  -->
 
-
-
                 <section id="exercise-2">
                   <section data-background="#d3420d">
-                    <h2>Exercise 2</h2>
+                    <h2>Exercise 3</h2>
                   </section>
 
                   <section data-background="#fff">
                     <h4>Name, role, value activity</h4>
                     <ul>
                       <li>Type: Individual</li>
-                      <li>Time: 6 mins</li>
+                      <li>Time: 5 mins</li>
                     </ul>
                   </section>
 
@@ -383,6 +411,178 @@
                     </ol>
                   </section>
                 </section>
+                
+                
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
+
+
+
+                        <section id="part-2">
+                          <section data-background="#15828E">
+                            <h2>Error messages</h2>
+                          </section>
+
+                        <section data-background="#fff">
+                                   <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
+                                   <h4>Error messages</h4>
+                                   <ul class="font-sm">
+                                     <li><b>As a</b>: user who submits a form</li>
+                                     <li><b>I want</b>: to know what errors I’ve made, where I have made those errors and how to fix them</li>
+                                     <li><b>So that</b>: I can fix errors quickly and easily</li>
+                                   </ul>
+                                 </section>
+
+                                 <section data-background="#fff">
+                                   <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+                                   <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/error-identification" target="_blank">3.3.1 Error Identification (A)</a></h4>
+                                   <p>If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text</p>
+                                  <p class="font-xs"><b>Semi-automated test</b> | Dev tools | Screen reader </p>
+                                 </section>
+
+                                 <section data-background="#fff">
+                                   <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
+                                   <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion" target="_blank">3.3.3 Error Suggestion (A)</a></h4>
+                                   <p>If an input error is automatically detected and suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content</p>
+                                   <p class="font-xs"><b>Semi-automated test</b> | Dev tools |Screen reader </p>
+                                 </section>
+
+                                 <section data-background="#222">
+                                   <h3>1. Multiple errors within a form</h3>
+                                 </section>
+
+                                 <section data-background="#fff">
+                                   <p>If there are <b>one or more errors within a form</b>, on submit should trigger either:</p>
+                                   <ul class="font-sm">
+                                     <li>focus should be set on the first error within the form OR</li>
+                                     <li>focus should go to an overall error message above the form</li>
+                                   </ul>
+                                 </section>
+
+                                 <section data-background="#fff">
+                                   <p>In the case of an <b>overall error message</b> above the form:</p>
+                                   <ul class="font-sm">
+                                     <li>Set focus on the error message container</li>
+                                     <li>List all errors within error message container</li>
+                                     <li>Recommended to link each error to affected field</li>
+                                   </ul>
+                                 </section>
+
+                                 <section data-background="#222">
+                                   <h3>2. Inline errors</h3>
+                                 </section>
+
+                                 <section data-background="#fff">
+                                   <p>For each form field in a <b>state of error</b>:</p>
+                                   <ul class="font-sm">
+                                     <li>Display an error message that helps users resolve the error</li>
+                                     <li>Programmatically associate the error message with the form control</li>
+                                     <li>Set the form control with <code>aria-invalid="true"</code></li>
+                                   </ul>
+                                 </section>
+                                 
+                                 <section data-background="#222">
+                                 <pre><code contenteditable="true">&lt;label for="n1"&gt;Name&lt;/label&gt;
+                                 &lt;input
+                                   type="text"
+                                   id="n1"
+                                   <span class="codeHighlight">aria-describedby="e1"</span>
+                                   <span class="codeHighlight">aria-invalid="true"</span>
+                                 &gt;
+                                 &lt;span <span class="codeHighlight">id="e1"</span>&gt;Error message&lt;/span&gt;</code></pre>
+                                           </section>
+
+                                           <section data-background="#222">
+                                             <h3>Checklist for error messages</h3>
+                                           </section>
+
+                                           <section data-background="#fff">
+                                             <table class="font-xs">
+                                               <thead>
+                                                 <tr>
+                                                   <th></th>
+                                                   <th>Criteria</th>
+                                                   <th>Details</th>
+                                                 </tr>
+                                               </thead>
+                                               <tbody>
+                                                 <tr>
+                                                   <td><input type="checkbox" class="checkbox-large" id="err"></td>
+                                                   <td>3.3.1 Identify error</td>
+                                                   <td><label for="err">The error message <b>must </b>identify what and where the mistake has been made</label></td>
+                                                 </tr>
+                                                 <tr>
+                                                   <td><input type="checkbox" class="checkbox-large" id="errsugg"></td>
+                                                   <td>3.3.3 Error suggestion</td>
+                                                   <td><label for="errsugg">How to fix an error <b>must </b>be indicated if known or relevant (unless it compromises security)</label></td>
+                                                 </tr>
+                                               </tbody>
+                                             </table>
+                                           </section>
+                                           <section data-background="#fff">
+                                                       <table class="font-xs">
+                                                         <thead>
+                                                           <tr>
+                                                             <th></th>
+                                                             <th>Criteria</th>
+                                                             <th>Details</th>
+                                                           </tr>
+                                                         </thead>
+                                                         <tbody>
+                                                           <tr>
+                                                             <td><input type="checkbox" class="checkbox-large" id="errsr"></td>
+                                                             <td>3.3.1 Errors announced</td>
+                                                             <td>
+                                                               <label for="errsr">Error messages <b>must </b>be announced to screen readers by (possible methods):</label>
+                                                               <ol class="font-sm">
+                                                                 <li>List errors at the top of the page and set focus to the list</li>
+                                                                 <li>Include errors inline</li>
+                                                                 <li>Link errors to the associated form field in code</li>
+                                                               </ol>
+                                                             </td>
+                                                           </tr>
+                                                           <tr>
+                                                             <td><input type="checkbox" class="checkbox-large" id="err-an"></td>
+                                                             <td>3.3.1 Announce errors</td>
+                                                             <td><label for="err-an">When a user moves away from a field and an error appears, errors <b>must </b>announce straight away to screen readers (not very usable unless immediate feedback is essential)</label></td>
+                                                           </tr>
+                                                         </tbody>
+                                                       </table>
+                                                     </section>
+                                                   </section>
+
+                <!--  –––––––––––––––––––––––––
+                ******  SECTION ******
+                ––––––––––––––––––––––––––  -->
+
+                        <section id="exercise-4">
+                          <section data-background="#d3420d">
+                            <h2>Exercise 4</h2>
+                          </section>
+
+                          <section data-background="#fff">
+                            <h4>Error messages activity</h4>
+                            <ul>
+                              <li>Type: Individual</li>
+                              <li>Time: 5 mins</li>
+                            </ul>
+                          </section>
+
+                          <section data-background="#fff">
+                            <h4>Instructions</h4>
+                            <ol class="font-sm">
+                              <li>Open the following <a href="https://interactiveaccessibility.com/education/training/ex1.1a.html" target="_blank">test page"</a></li>
+                              <li>Submit the form with missing or invalid data and use Dev tools to test if error messages are linked to the input</li>
+                              <li>Post any failures in the chat as follows:
+                                <ul class="font-sm">
+                                  <li>3.3.1 Error indication (describe element)</li>
+                                  <li>3.3.3 Error suggestion (describe element)</li>
+                                </ul>
+                              </li>
+                            </ol>
+                          </section>
+                        </section>
 
 <!--  –––––––––––––––––––––––––
 ******  SECTION ******
@@ -392,12 +592,14 @@
 
         <section id="session-3-review">
           <section data-background="#d3420d">
-            <h2>Session 3 - That's a wrap!</h2>
+            <h2>Session 3 - Review</h2>
           </section>
           
           <section data-background="#fff">
             <img src="assets/img-testing/quiz.svg" style="float: right; width: 112px;" alt="Quiz icon">
-            <h4>Questions?</h4>
+                <h4>Quiz</h4>
+                <p>Let's see how much you can remember!</p>
+                <a href="https://app.sli.do/event/tuBZ2xFDpHqW5raMmiLu7w" target="blank">Slido link</a>
           </section>
         </section>
       </div>
