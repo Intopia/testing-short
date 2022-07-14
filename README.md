@@ -1,6 +1,4 @@
-# Testing web accessibility for teams
-
-Shorter Intopia testing course - for designers, developers, testers and teams
+# "Testing web accessibility for teams" course
 
 https://training.intopia.digital/testing-web-accessibility-for-teams/
 
