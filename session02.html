@@ -1,111 +1,122 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-            <title>Session 2 | Web Accessibility Testing for Teams</title>
-            <link rel="shortcut icon" href="favicon.ico">
-                <meta name="apple-mobile-web-app-capable" content="yes">
-                    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                            <link rel="stylesheet" href="dist/reveal.css">
-                                <link rel="stylesheet" href="dist/theme/intopia.css">
-                                    <link rel="preconnect" href="https://fonts.googleapis.com">
-                                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                                            <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
-                                                <!-- Printing and PDF exports -->
-                                                <script>
-                                                    var link = document.createElement( 'link' );
-                                                    link.rel = 'stylesheet';
-                                                    link.type = 'text/css';
-                                                    link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
-                                                    document.getElementsByTagName( 'head' )[0].appendChild( link );
-                                                </script>
-                                            </head>
-    <body>
-        <div class="reveal">
-            <div class="slides">
-                
-                <div class="menu">
-                    <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
-                </div>
-                
-                <section data-background="#fff">
-                    <div class="instructions">
-                        <h3 class="instructions-heading">Slide instructions</h3>
-                        <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
-                        <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
-                        <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
-                        <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
-                        <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
-                    </div>
-                </section>
-                
-                
-                
-                <!--  –––––––––––––––––––––––––
-                ******  SECTION ******
-                ––––––––––––––––––––––––––  -->
-                
-                <section id="session-2">
-                    <section data-background="#d3420d">
-                        <h1>Session 2</h1>
-                        <h5>Testing for Accessibility</h5>
-                    </section>
-                    
-                    <section data-background="#fff">
-                      <h4>What you will need</h4>
-                      <p>Download at: <a href="https://bit.ly/" target="_blank">bit.ly/</a></p>
-                      <ul>
-                          <li><a href="https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd?utm_source=deque.com&utm_medium=referral&utm_campaign=axe-browser-extensions_hero" target="blank">Axe by Deque</a></li>
-                          <li><a href="https://accessibilityinsights.io/en/downloads/" target="blank">Microsoft Accessibility Insights</a></li>
-                      </ul>
-                    </section>
-                    
-                    <section data-background="#fff">
-                        <h4>Today</h4>
-                        <ul>
-                            <li>Part 1: 55 minutes</li>
-                            <li>Break: 10 minutes</li>
-                            <li>Part 2: 55 minutes</li>
-                        </ul>
-                    </section>
-                    
-                    <section data-background="#fff">
-                        <img src="assets/img-testing/overview.svg" style="float: right; width: 112px" alt="Overview">
-                            <h4>Overview</h4>
-                            <ul class="font-sm">
-                                <li>Headings</li>
-                                <li>Landmarks</li>
-                                <li>Images - decorative and meaningful</li>
-                                <li>Links and skip links</li>
-                            </ul>
-                    </section>
-                </section>
-                
-                <!--  –––––––––––––––––––––––––
-                ******  SECTION ******
-                ––––––––––––––––––––––––––  -->
-                <section id="landmarks">
-                    <section data-background="#15828E">
-                        <h2>Landmarks</h2>
-                    </section>
-                    
-                    <section data-background="#fff">
-                        <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
-                            <h4>Landmark regions</h4>
-                            <ul class="font-sm">
-                                <li><b>As a</b> screen reader or keyboard user</li>
-                                <li><b>I want</b> to easily navigate to common regions of a page</li>
-                                <li><b>so that </b> I don’t have to navigate linearly through content</li>
-                            </ul>
-                    </section>
-                    </section>
-                    
-                    <!--  –––––––––––––––––––––––––
-                    ******  SECTION ******
-                    ––––––––––––––––––––––––––  -->
+  <head>
+    <meta charset="utf-8">
+    <title>Session 2 | Web Accessibility Testing for Teams</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/intopia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'dist/theme/pdf.css' : 'dist/theme/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
 
-                    <section id="exercise-1">
+        <div class="menu">
+          <a href="index.html">Home<span class="hidden"> - list of all slide decks</span></a> | <a href="#/">Start<span class="hidden"> of slide deck</span></a>
+        </div>
+
+        <section data-background="#fff">
+          <div class="instructions">
+            <h3 class="instructions-heading">Slide instructions</h3>
+            <p><kbd>SPACEBAR</kbd> to <b>move forward</b> through slides.</p>
+            <p><kbd>SHIFT</kbd> &amp; <kbd>SPACEBAR</kbd> to <b>move backwards</b> through slides.</p>
+            <p><kbd>LEFT ARROW</kbd> &amp; <kbd>RIGHT ARROW</kbd> to <b>move through sections</b>.</p>
+            <p><kbd>ESC</kbd> to <b>see overview</b> and <kbd>ESC</kbd> again to exit.</p>
+            <p><kbd>F</kbd> to <b>enter presentation mode</b> and <kbd>ESC</kbd> to exit.</p>
+          </div>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="session1">
+          <section data-background="#d3420d">
+            <h1>Session 2</h1>
+            <h5>Testing for Accessibility</h5>
+          </section>
+
+          <section data-background="#fff">
+            <h4>What you will need</h4>
+            <p>Download at: <a href="https://bit.ly/" target="_blank">bit.ly/</a></p>
+            <ul>
+                <li><a href="https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd?utm_source=deque.com&utm_medium=referral&utm_campaign=axe-browser-extensions_hero" target="blank">Axe by Deque</a></li>
+                <li><a href="https://accessibilityinsights.io/en/downloads/" target="blank">Microsoft Accessibility Insights</a></li>
+            </ul>
+          </section>
+                    
+          <section data-background="#fff">
+            <h4>Today</h4>
+            <ul>
+              <li>Part 1: 55 minutes</li>
+              <li>Break: 10 minutes</li>
+              <li>Part 2: 55 minutes</li>
+            </ul>
+          </section>
+                    
+          <section data-background="#fff">
+            <img src="assets/img-testing/overview.svg" style="float: right; width: 112px" alt="Overview">
+            <h4>Overview</h4>
+            <ul class="font-sm">
+              <li>Headings</li>
+              <li>Landmarks</li>
+              <li>Images - decorative and meaningful</li>
+              <li>Links and skip links</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="landmarks">
+          <section data-background="#15828E">
+            <h2>Landmarks</h2>
+          </section>
+                    
+          <section data-background="#fff">
+            <img src="assets/img-testing/profile.svg" style="float: right; width: 112px" alt="Profile">
+            <h4>Landmark regions</h4>
+            <ul class="font-sm">
+              <li><b>As a</b> screen reader or keyboard user</li>
+              <li><b>I want</b> to easily navigate to common regions of a page</li>
+              <li><b>so that </b> I don’t have to navigate linearly through content</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+<!--  –––––––––––––––––––––––––
+******  SECTION ******
+––––––––––––––––––––––––––  -->
+
+
+
+        <section id="exercise-1">
                               <section data-background="#d3420d">
                                 <h2>Exercise 1</h2>
                               </section>
@@ -188,14 +199,14 @@
                     <section data-background="#fff">
                         <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
                             <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" target="_blank">1.3.1 Info &amp; Relationships (A)</a></h4>
-                            <p>Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.</p></br></br></br>
+                            <p>Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.</p><br><br><br>
                             <p class="font-xs"><b>Semi-automated test</b> | Microsoft Insights > Landmarks | Visual check</p>
                     </section>
                     
                     <section data-background="#fff">
                         <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
                             <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks" target="_blank">2.4.1 Bypass blocks (A)</a></h4>
-                            <p>A mechanism is available to bypass blocks of content that are repeated on multiple Web pages.</p></br></br></br></br>
+                            <p>A mechanism is available to bypass blocks of content that are repeated on multiple Web pages.</p><br><br><br><br>
                             <p class="font-xs"><b>Semi-automated test</b> | Microsoft Insights > Landmarks | Visual check</p>
                     </section>
                     
@@ -335,14 +346,14 @@
                     <section data-background="#fff">
                         <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
                             <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" target="_blank">1.3.1 Info &amp; Relationships (A)</a></h4>
-                            <p>Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.</p></br></br></br>
+                            <p>Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.</p><br><br><br>
                             <p class="font-xs"><b>Semi-automated test</b> | Microsoft Insights > Headings | Visual check</p>
                     </section>
                     
                     <section data-background="#fff">
                         <img src="assets/img-testing/wcag.svg" style="float: right; width: 112px" alt="WCAG checkpoint">
                             <h4><a href="https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels" target="_blank">2.4.6 Headings and Labels (AA)</a></h4>
-                            <p>Headings and labels describe topic or purpose</p></br></br></br></br></br>
+                            <p>Headings and labels describe topic or purpose</p><br><br><br><br><br>
                             <p class="font-xs"><b>Semi-automated test</b> Microsoft Insights > Headings | Visual check</p>
                     </section>
                     
@@ -676,8 +687,8 @@
                     <section data-background="#fff">
                         <h4>Instructions</h4>
                         <ol class="font-sm">
-                            <li>Open up your organisation/product homepage</a></li>
-                            <li>Using <b>Axe</b> test the images on the page</li
+                            <li>Open up your organisation/product homepage</li>
+                            <li>Using <b>Axe</b> test the images on the page</li>
                                 <li>Post in the chat any failures you find as follows:
                                 <ul>
                                     <li>1.1.1 Non-text content (describe element)</li>
@@ -857,7 +868,7 @@
                     <section data-background="#fff">
                         <h4>Instructions</h4>
                         <ol class="font-sm">
-                            <li>Use your <b>keyboard </b>and <b> Axe</b> to test links on your organisation/product homepage</a></li>
+                            <li>Use your <b>keyboard </b>and <b> Axe</b> to test links on your organisation/product homepage</li>
                             <li>Post any issues you find to the chat as follows:
                                 <ul class="font-sm">
                                     <li>2.4.4 Link purpose: (Describe issue)</li>
@@ -878,42 +889,39 @@
                 
                 
                 
-                <section id="session-2-review">
-                    <section data-background="#d3420d">
-                        <h2>Session 2 review</h2>
-                    </section>
+          <section id="session-2-review">
+            <section data-background="#d3420d">
+              <h2>Session 2 review</h2>
+            </section>
                     
-                    <section data-background="#fff">
-                      <img src="assets/img-testing/quiz.svg" style="float: right; width: 112px;" alt="Quiz icon">
-                      <h4>Quiz</h4>
-                      <p>Let's see how much you can remember!</p>
-                      <a href="https://wall.sli.do/event/njwY6nALA7P3SSD1M8PS6A?section=5b7b76fd-aec0-45a2-b74f-e7b9a84e263a" target="blank">Slido link</a>
-                    </section>
-                  </section>
-                </section>
-            </div>
-            
-            
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
-        <script src="dist/reveal.js"></script>
-        <script src="plugin/notes/notes.js"></script>
-        
-        <script>
-            // More info about initialization & config:
-            // - https://revealjs.com/initialization/
-            // - https://revealjs.com/config/
-            Reveal.initialize({
-                hash: true,
-                controls: true,
-                progress: true,
-                history: true,
-                center: true,
-                transition: 'none',
-                // Learn about plugins: https://revealjs.com/plugins/
-                plugins: [ RevealNotes ]
-            });
-        </script>
-        
-    </body>
+              <section data-background="#fff">
+                <img src="assets/img-testing/quiz.svg" style="float: right; width: 112px;" alt="Quiz icon">
+                <h4>Quiz</h4>
+                <p>Let's see how much you can remember!</p>
+                <a href="https://wall.sli.do/event/njwY6nALA7P3SSD1M8PS6A?section=5b7b76fd-aec0-45a2-b74f-e7b9a84e263a" target="blank">Slido link</a>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'none',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealNotes ]
+      });
+    </script>
+
+  </body>
 </html>
