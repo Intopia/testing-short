@@ -1,0 +1,22 @@
+name: deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  release:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: AKIAY4VJZXGH6KKL2HWN
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ap-southeast-2
+
+    - name: Deploy static site to S3 bucket
+      run: aws s3 sync ./src/ s3://intopia-training-static-sites/intopia/testing-web-accessibility-for-teams --delete
